@@ -40,19 +40,47 @@
       </ul>
     </div>
  -->    
-    <div class="navigation-tools">
-<!--       <div class="search-bar">
-        <div class="search-and-submit">
-          <input type="search" placeholder="Enter Search" />
-          <button type="submit">
-            <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
-          </button>
+
+
+
+    <div class="modal">
+      <label for="modal-1">
+        <div class="modal-trigger">Sign Up</div>
+      </label>
+      <input class="modal-state" id="modal-1" type="checkbox" />
+      <div class="modal-window">
+        <div class="modal-inner">
+          <label class="modal-close" for="modal-1"></label>
+          <h1>Sign Up</h1>
+          <form method='post' action='/signup'>
+          <input type='text' placeholder='username'>
+          <input type='password' placeholder='password'>
+          <input type='submit'>
+          <input type='reset'>
+          </form>
         </div>
       </div>
- -->      
-      <a href="javascript:void(0)" class="sign-up">Sign Up</a>
-      <a href="javascript:void(0)" class="sign-up">Sign In</a>
     </div>
+        <div class="modal">
+      <label for="modal-2">
+        <div class="modal-trigger">Sign In</div>
+      </label>
+      <input class="modal-state" id="modal-2" type="checkbox" />
+      <div class="modal-window">
+        <div class="modal-inner">
+          <label class="modal-close" for="modal-2"></label>
+          <h1>Sign In</h1>
+          <form method='post' action='/signin'>
+          <input type='text' placeholder='username'>
+          <input type='password' placeholder='password'>
+          <input type='submit'>
+          <input type='reset'>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </header>
 
