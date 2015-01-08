@@ -2,7 +2,6 @@
 @import 'neat/neat';
 
 header.navigation {
-  ///////////////////////////////////////////////////////////////////////////////////
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-accent-color: #477DCA !default;
@@ -13,7 +12,6 @@ header.navigation {
   a {
     text-decoration: none;
   }
-  //////////////////////////////////////////////////////////////////////////////////
 
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
@@ -602,3 +600,31 @@ header.navigation {
 }
 
 // Based on code by Kasper Mikiewicz
+
+$body-font-size: 1em !default;
+$body-line-height: golden-ratio(1em, 1) !default;
+$body-font-family: $helvetica !default;
+
+section {
+  @include outer-container;
+  text-align: center;
+  margin-bottom: 3em;
+
+  & > code, code.block {
+    display: block;
+  }
+
+  div {
+    height: $body-line-height*4;
+    line-height: $body-line-height;
+    text-align: left;
+    padding: 1em;
+  }
+
+  &.zero {
+    div {
+      @include span-columns(6);
+      height: 20em;
+    }
+  }
+}
