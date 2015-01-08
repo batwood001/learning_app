@@ -1,5 +1,7 @@
 @import 'bourbon/bourbon';
-@import 'neat/neat';
+@import 'neat/_sass/variables';
+@import 'neat/app/assets/stylesheets/neat';
+@import 'neat/_sass/typography';
 
 header.navigation {
   $base-border-color: gainsboro !default;
