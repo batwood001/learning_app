@@ -10,13 +10,13 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :lectures do |t|
       t.string :topic
-      # t.integer :user_id
+      t.integer :user_id
       t.string :passphrase
       t.timestamps
     end
 
     create_table :questions do |t|
-      # t.integer :lecture_id
+      t.integer :lecture_id
       t.text :question
       t.string :answer_one
       t.string :answer_two
@@ -31,8 +31,8 @@ class CreateTables < ActiveRecord::Migration
     end
 
     create_table :responses do |t|
-      # t.integer :user_id
-      # t.integer :question_id
+      t.integer :user_id
+      t.integer :question_id
       t.string :response
       t.timestamps
     end
