@@ -12,7 +12,7 @@ function ajaxSignin() {
       localStorage.setItem("apiToken", token)
       // inform user of successful signup, hide and clear inputs.
       alert($("#usernameSignin").val() + " successfully signed in.");
-      $(".signinContainer").hide();
+      $(".authContainer").hide();
       $(".spacerSignin").hide();
       $("#usernameSignin").val('');
       $("#passwordSignin").val('');
