@@ -257,56 +257,54 @@
                       <input type="text" class="form-control" id="new-question" placeholder="Enter new question here:">
                     </div>
                   </form>
-                  <div class="row">
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                    <div class="col-lg-6">
-                      <div class="input-group">
-                        <span class="input-group-addon">
-                          <input type="radio" aria-label="...">
-                        </span>
-                        <input type="text" class="form-control" aria-label="...">
-                      </div><!-- /input-group -->
-                    </div><!-- /.col-lg-6 -->
-                  </div><!-- /.row -->
+                  <div class="input-group">
+                    <span class="input-group-addon" id="A">A</span>
+                    <input type="text" class="form-control" placeholder="Answer A" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="B">B</span>
+                    <input type="text" class="form-control" placeholder="Answer B" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="C">C</span>
+                    <input type="text" class="form-control" placeholder="Answer C" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="D">D</span>
+                    <input type="text" class="form-control" placeholder="Answer D" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="E">E</span>
+                    <input type="text" class="form-control" placeholder="Answer E" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="F">F</span>
+                    <input type="text" class="form-control" placeholder="Answer F" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="G">G</span>
+                    <input type="text" class="form-control" placeholder="Answer G" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="H">H</span>
+                    <input type="text" class="form-control" placeholder="Answer H" aria-describedby="basic-addon1">
+                  </div>
+                  <div id="correct-answer" class="dropdown">
+                    <button type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Select Correct Answer
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <li><a id="A">A</a></li>
+                      <li><a id="B">B</a></li>
+                      <li><a id="C">C</a></li>
+                      <li><a id="D">D</a></li>
+                      <li><a id="E">E</a></li>
+                      <li><a id="F">F</a></li>
+                      <li><a id="G">G</a></li>
+                      <li><a id="H">H</a></li>
+                    </ul>
+                  </div>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
