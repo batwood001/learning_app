@@ -15,12 +15,12 @@ module LearningApp
 
     def self.set_active_by_lecture_id(lecture_id)
       lecture = Lecture.find_by(id: lecture_id)
-      lecture.presentation_state == 'not yet presented' ? lecture.update(presentation_state: 'active') : "Lecture already started."
+      lecture.presentation_state == 'not yet presented' ? lecture.update(presentation_state: 'active') : "Cannot activate lecture; lecture state is: #{lecture.presentation_state}"
     end
 
     def self.set_inactive_by_lecture_id(lecture_id)
       lecture = Lecture.find_by(id: lecture_id)
-      lecture.presentation_state == 'active' ? lecture.update(presentation_state: 'presented') : "Lecture already ended."
+      lecture.presentation_state == 'active' ? lecture.update(presentation_state: 'presented') : "Cannot inactivate lecture; lecture state is: #{lecture.presentation_state}"
     end
   end
 end
