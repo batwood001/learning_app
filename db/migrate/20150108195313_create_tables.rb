@@ -11,8 +11,7 @@ class CreateTables < ActiveRecord::Migration
     create_table :lectures do |t|
       t.string :topic
       t.integer :user_id
-      t.string :passphrase
-      t.boolean :active
+      t.string :presentation_state
       t.timestamps
     end
 
@@ -28,7 +27,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :answer_seven
       t.string :answer_eight
       t.string :correct_answer
-      t.boolean :active
+      t.string :presentation_state
       t.timestamps
     end
 
