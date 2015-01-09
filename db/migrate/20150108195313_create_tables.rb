@@ -12,6 +12,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :topic
       t.integer :user_id
       t.string :passphrase
+      t.boolean :active
       t.timestamps
     end
 
@@ -27,6 +28,7 @@ class CreateTables < ActiveRecord::Migration
       t.string :answer_seven
       t.string :answer_eight
       t.string :correct_answer
+      t.boolean :active
       t.timestamps
     end
 
