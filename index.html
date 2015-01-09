@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>Learning App</title>
 
     <!-- Bootstrap core CSS -->
     <link href="public/stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,9 +38,10 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Project name</a>
+          <a class="navbar-brand" href="#">Boring Learning App Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+          <div class="authContainer">
           <form class="navbar-form navbar-right">
             <div class="form-group">
               <input type="text" placeholder="Email" class="form-control">
@@ -48,9 +49,10 @@
             <div class="form-group">
               <input type="password" placeholder="Password" class="form-control">
             </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-            <button type="submit" class="btn btn-success">Sign up</button>
+            <button type="submit" class="btn signinBtn">Sign in</button>
+            <button type="submit" class="btn signupBtn">Sign up</button>
           </form>
+          </div>
         </div><!--/.navbar-collapse -->
       </div>
     </nav>
@@ -110,10 +112,10 @@
               <thead>
                 <tr>
                   <th>#</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
-                  <th>Header</th>
+                  <th>Lecture</th>
+                  <th>Question Link</th>
+                  <th>Correct Answer</th>
+                  <th>Your Answer</th>
                 </tr>
               </thead>
               <tbody>
@@ -241,8 +243,10 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="../../dist/js/bootstrap.min.js"></script>
-    <script src="../../assets/js/docs.min.js"></script>
+    <script src="public/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="public/stylesheets/bootstrap/js/docs.min.js"></script>
+    <script src="public/stylesheets/bootstrap/js/signin.js"></script>
+    <script src="public/stylesheets/bootstrap/js/signup.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
