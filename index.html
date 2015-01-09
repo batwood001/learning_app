@@ -3,9 +3,7 @@
 <head>
   <title>Pop Quiz</title>
   <link href="public/stylesheets/style.css" media="all" rel="stylesheet" />
-<!--   <meta content="authenticity_token" name="csrf-param" />
-<meta content="/1mwReELj0AjyVt00XcxI0CSSAtXVrrFUmcozNkFDU0=" name="csrf-token" />
- --></head>
+</head>
 <body>
 
 <header class="navigation">
@@ -14,35 +12,11 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png" alt="Logo Image">
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
-<!--     <div class="nav">
-      <ul id="js-navigation-menu" class="navigation-menu show">
-        <li class="nav-link"><a href="javascript:void(0)">Products</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">About Us</a></li>
-        <li class="nav-link"><a href="javascript:void(0)">Contact</a></li>
-        <li class="nav-link more"><a href="javascript:void(0)">More</a>
-          <ul class="submenu">
-            <li><a href="javascript:void(0)">Submenu Item</a></li>
-            <li><a href="javascript:void(0)">Another Item</a></li>
-            <li class="more"><a href="javascript:void(0)">Item with submenu</a>
-              <ul class="submenu">
-                <li><a href="javascript:void(0)">Sub-submenu Item</a></li>
-                <li><a href="javascript:void(0)">Another Item</a></li>
-              </ul>
-            </li>
-            <li class="more"><a href="javascript:void(0)">Another submenu</a>
-              <ul class="submenu">
-                <li><a href="javascript:void(0)">Sub-submenu</a></li>
-                <li><a href="javascript:void(0)">An Item</a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
+    <div class="nav">
+      <ul class="navigation-menu">
+        <li class="nav-link"><a href="/">Boring Learning App Name</a></li>
       </ul>
     </div>
- -->    
-
-
-
     <div class="modal">
       <label for="modal-1">
         <div class="modal-trigger">Sign Up</div>
@@ -53,7 +27,7 @@
           <label class="modal-close" for="modal-1"></label>
           <h1>Sign Up</h1>
           <form method='post' action='/signup'>
-          <input type='text' placeholder='username'>
+          <input type='text' placeholder='email'>
           <input type='password' placeholder='password'>
           <input type='submit'>
           <input type='reset'>
@@ -71,7 +45,7 @@
           <label class="modal-close" for="modal-2"></label>
           <h1>Sign In</h1>
           <form method='post' action='/signin'>
-          <input type='text' placeholder='username'>
+          <input type='text' placeholder='email'>
           <input type='password' placeholder='password'>
           <input type='submit'>
           <input type='reset'>
@@ -86,10 +60,8 @@
 
 <div class="app-content"><div class="container">
   <h1>Class Questions</h1>
-  <p>Complete multiple choice questions about your learning!</p>
-
-<!--     <p><a href="/auth/makersquare">Sign in with MakerSquare</a></p>
- --></div>
+  <p>Complete multiple choice questions about your current lecture!</p>
+</div>
 
  <button type="button" class="js-menu-trigger sliding-menu-button">
   <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/menu-white.png" alt="Menu Icon">
@@ -106,6 +78,11 @@
 <div class="js-menu-screen sliding-menu-fade-screen"></div>
 
 </body>
+
+  <section>Table Test
+    <div id="alpha">Testing</div>
+    <div id="beta">Testing Again</div>
+  </section>
 
   <script>
   $(document).ready(function(){
