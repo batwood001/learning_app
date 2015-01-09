@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20150108195313) do
     t.string   "topic"
     t.integer  "user_id"
     t.string   "passphrase"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150108195313) do
     t.string   "answer_seven"
     t.string   "answer_eight"
     t.string   "correct_answer"
+    t.boolean  "active"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
