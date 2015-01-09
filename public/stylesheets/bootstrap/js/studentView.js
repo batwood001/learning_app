@@ -1,6 +1,8 @@
 function studentView () {
-  $("#studentView").click(function() {
+  $("#toggleStudentView").click(function() {
     $(".addQuestion").hide();
+    $(".toggleStudentView").hide();
+    $(".toggleTeacherView").show();
   })
 };
 
