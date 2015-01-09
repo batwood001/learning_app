@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> App Name</a>
+          <a class="navbar-brand" href=""> App Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -239,10 +239,81 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button">Add New Question</button></td>
+                  <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
                 </tr>
               </tbody>
             </table>
+          </div>
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">New Question</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="new-question" placeholder="Enter new question here:">
+                    </div>
+                  </form>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                    <div class="col-lg-6">
+                      <div class="input-group">
+                        <span class="input-group-addon">
+                          <input type="radio" aria-label="...">
+                        </span>
+                        <input type="text" class="form-control" aria-label="...">
+                      </div><!-- /input-group -->
+                    </div><!-- /.col-lg-6 -->
+                  </div><!-- /.row -->
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -265,6 +336,5 @@
     <script src='public/stylesheets/bootstrap/js/hi.js'></script>
     <script src='public/stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='public/stylesheets/bootstrap/js/studentView.js'></script>
-    </script>
   </body>
 </html>
