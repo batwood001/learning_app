@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> App Name</a>
+          <a class="navbar-brand" href=""> App Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -240,11 +240,12 @@
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button">Add New Question</button></td>
+                  <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
+
 
 
           <div class="table-responsive overview activeQuestions col-md-8" style='display:none'>
@@ -276,11 +277,73 @@
             </div>
           </div>
 
-
-
-
-
-
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">New Question</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="new-question" placeholder="Enter new question here:">
+                    </div>
+                  </form>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="A">A</span>
+                    <input type="text" class="form-control" placeholder="Answer A" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="B">B</span>
+                    <input type="text" class="form-control" placeholder="Answer B" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="C">C</span>
+                    <input type="text" class="form-control" placeholder="Answer C" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="D">D</span>
+                    <input type="text" class="form-control" placeholder="Answer D" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="E">E</span>
+                    <input type="text" class="form-control" placeholder="Answer E" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="F">F</span>
+                    <input type="text" class="form-control" placeholder="Answer F" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="G">G</span>
+                    <input type="text" class="form-control" placeholder="Answer G" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="H">H</span>
+                    <input type="text" class="form-control" placeholder="Answer H" aria-describedby="basic-addon1">
+                  </div>
+                  <br>
+                  <div id="selected" class="form-group">
+                    <label for="sel1">Select correct answer:</label>
+                    <select class="form-control" id="sel1">
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                      <option>D</option>
+                      <option>E</option>
+                      <option>F</option>
+                      <option>G</option>
+                      <option>H</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit new question</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -292,8 +355,7 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="public/stylesheets/bootstrap/js/bootstrap.min.js"></script>
@@ -302,6 +364,5 @@
     <script src='public/stylesheets/bootstrap/js/hi.js'></script>
     <script src='public/stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='public/stylesheets/bootstrap/js/studentView.js'></script>
-    </script>
   </body>
 </html>
