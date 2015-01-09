@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Boring Learning App Name</a>
+          <a class="navbar-brand" href="#"> App Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -62,6 +62,8 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
+          <button id='teacherView' type='submit' class='btn btn-warning'>Teacher View</button>
+          <button id='studentView' type='submit' class='btn btn-info'>Student View</button>
           <h3><span class="label label-default">User Name</span></h3>
             <li class="active"><a href="">Overview <span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Reports</a></li>
@@ -232,6 +234,13 @@
                   <td>in</td>
                   <td>libero</td>
                 </tr>
+                <tr class='addQuestion'>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td><button type="button">Add New Question</button></td>
+                </tr>
               </tbody>
             </table>
           </div>
@@ -254,7 +263,8 @@
     <script src="public/stylesheets/bootstrap/js/signin.js"></script>
     <script src="public/stylesheets/bootstrap/js/signup.js"></script>
     <script src='public/stylesheets/bootstrap/js/hi.js'></script>
-
+    <script src='public/stylesheets/bootstrap/js/teacherView.js'></script>
+    <script src='public/stylesheets/bootstrap/js/studentView.js'></script>
     </script>
   </body>
 </html>
