@@ -13,7 +13,5 @@ module LearningApp
     validates :password, presence: true
     validates_format_of :password, with: /[a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+/, message: "must contain letter and number"
     validates :role, presence: true
-
-    # add_index :email, unique: true
   end
 end
