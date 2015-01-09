@@ -12,6 +12,6 @@ module LearningApp
     validates :password, length: { minimum: 4 }
     validates_format_of :password, with: /[a-zA-Z]+[0-9]+|[0-9]+[a-zA-Z]+/, message: "must contain letter and number"
     validates :role, presence: true
-    validates :role, length: { in: 7..10}
+    validates_format_of :role, with: /student|instructor/
   end
 end
