@@ -20,10 +20,9 @@ module LearningApp
       question.save ? true : question.errors.messages
     end
 
-    #display to teacher while question 
+    # display to teacher while question 
     def self.get_question_and_answers_by_question_id(question_id) 
-      Question.find_by(id: question_id).attributes
-      
+      Question.find_by(id: question_id).attributes 
     end
 
     def self.set_active_by_question_id(question_id)
@@ -36,12 +35,23 @@ module LearningApp
       question.presentation_state == 'active' ? question.update(presentation_state: 'presented') : "Cannot inactivate question; question state is: #{question.presentation_state}"
     end
 
-    #
-    def self.get_correct_answer_by_question_id(question_id)
-      Question.find_by(id: question_id).attributes
+    # for reviewing questions with their correct answer after a lecture has finished
+    def self.get_correct_answer_by_lecture_id(lecture_id)
+      questions = Question.where(lecture_id: lecture_id).as_json
+      questions.each do |question|
+        question.delete('answer_one')
+        question.delete('answer_two')
+        question.delete('answer_three') if question['answer_three']
+        question.delete('answer_four')  if question['answer_four']
+        question.delete('answer_five') if question['answer_five']
+        question.delete('answer_six') if question['answer_six']
+        question.delete('answer_seven') if question['answer_seven']
+        question.delete('answer_eight') if question['answer_eight']
+      end
+      questions
     end
 
-    #display to students
+    # display to students
     def self.get_active_question 
       question = Question.find_by(presentation_state: 'active').attributes
       question.delete('correct_answer')

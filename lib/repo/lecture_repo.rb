@@ -22,5 +22,10 @@ module LearningApp
       lecture = Lecture.find_by(id: lecture_id)
       lecture.presentation_state == 'active' ? lecture.update(presentation_state: 'presented') : "Cannot inactivate lecture; lecture state is: #{lecture.presentation_state}"
     end
+
+    # For the lecture landing page: displays all questions and their answers per lecture topic
+    def self.get_all_presented_lectures_and_questions
+      Lecture.joins(:questions).where("lectures.presentation_state = 'presented'").as_json
+    end
   end
 end
