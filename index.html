@@ -39,7 +39,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"> App Name</a>
+          <a class="navbar-brand" href=""> App Name</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -62,8 +62,8 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-          <button id='teacherView' type='submit' class='btn btn-warning'>Teacher View</button>
-          <button id='studentView' type='submit' class='btn btn-info'>Student View</button>
+          <button id='toggleTeacherView' type='submit' class='btn btn-warning toggleTeacherView' style='display:none'>Switch to Teacher View</button>
+          <button id='toggleStudentView' type='submit' class='btn btn-info toggleStudentView' >Switch to Student View</button>
           <h3><span class="label label-default">User Name</span></h3>
             <li class="active"><a href="">Overview <span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Reports</a></li>
@@ -109,8 +109,9 @@
             </div> -->
           <!-- </div> -->
 
-          <h2 class="page-header">Past Questions</h2>
+          
           <div class="table-responsive overview" id='overview'>
+          <h2 class="page-header">Welcome</h2>
             <table class="table table-striped">
               <thead>
                 <tr>
@@ -234,15 +235,114 @@
                   <td>in</td>
                   <td>libero</td>
                 </tr>
-                <tr class='addQuestion'>
+                <tr class='addQuestion' >
                   <td></td>
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td><button type="button">Add New Question</button></td>
+                  <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
                 </tr>
               </tbody>
             </table>
+          </div>
+
+
+
+          <div class="table-responsive overview activeQuestions col-md-8" style='display:none'>
+            <h2 class="page-header">Current Question</h2>
+            <div class="panel panel-primary">
+              <!-- Default panel contents -->
+              <div class="panel-heading">Active Question</div>
+              <div class="panel-body">
+              </div>
+              <!-- Question Text -->
+              <div class="well well-lg">Question text, here is a question.  You should answer it, and quickly.</div>
+              <!-- Table -->
+              <div class="list-group">
+                <a href="#" class="list-group-item success">
+                  Answer A: Blah Blah Blah, blahbidy blah
+                </a>
+                <a href="#" class="list-group-item">Answer B: Dapibus ac facilisis in Dapibus ac facilisis in Dapibus ac facilisis inDapibus ac facilisis in</a>
+                <a href="#" class="list-group-item">Answer C: orbi leo risus orbi leo risusorbi leo risus orbi leo risus orbi leo risus</a>
+                <a href="#" class="list-group-item">Answer D: weoifj woeifj woeffh woefih wefoih wefoih wfeoih </a>
+                <a href="#" class="list-group-item">Answer E: Vestibulum at eros Vestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at erosVestibulum at erosVestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at eros</a>
+              </div>
+
+
+
+              <div class='panel-footer'>
+                <div align='right'>
+                  <button type="button" class="btn btn-primary">Submit</button>
+                </div></div>
+            </div>
+          </div>
+
+          <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">New Question</h4>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="form-group">
+                      <textarea class="form-control" id="new-question" rows="3" placeholder="Enter new question here"></textarea>
+                    </div>
+                  </form>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="A">A</span>
+                    <input type="text" class="form-control" placeholder="Answer A" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="B">B</span>
+                    <input type="text" class="form-control" placeholder="Answer B" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="C">C</span>
+                    <input type="text" class="form-control" placeholder="Answer C" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="D">D</span>
+                    <input type="text" class="form-control" placeholder="Answer D" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="E">E</span>
+                    <input type="text" class="form-control" placeholder="Answer E" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="F">F</span>
+                    <input type="text" class="form-control" placeholder="Answer F" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="G">G</span>
+                    <input type="text" class="form-control" placeholder="Answer G" aria-describedby="basic-addon1">
+                  </div>
+                  <div class="input-group">
+                    <span class="input-group-addon" id="H">H</span>
+                    <input type="text" class="form-control" placeholder="Answer H" aria-describedby="basic-addon1">
+                  </div>
+                  <br>
+                  <div id="selected" class="form-group">
+                    <label for="sel1">Select correct answer:</label>
+                    <select class="form-control" id="sel1">
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                      <option>D</option>
+                      <option>E</option>
+                      <option>F</option>
+                      <option>G</option>
+                      <option>H</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit new question</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -255,8 +355,7 @@
       </div>
     </footer>
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
+    <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="public/stylesheets/bootstrap/js/bootstrap.min.js"></script>
@@ -265,6 +364,5 @@
     <script src='public/stylesheets/bootstrap/js/hi.js'></script>
     <script src='public/stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='public/stylesheets/bootstrap/js/studentView.js'></script>
-    </script>
   </body>
 </html>
