@@ -9,16 +9,20 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
-      console.log(typeof data);
+      var object = jQuery.parseJSON(data)
       console.log("signin success")
+      console.log(object)
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      getLectures();
-      $("#currentUser").text[data['first_name']];
+      // getLectures();
+      $(".currentUser").text(object['first_name'].toUpperCase());
+      if(object['role'] == "student"){
+        studentView();
+      }
     })
   })
-};
+}
 
 
 ajaxSignin();

@@ -16,13 +16,15 @@ function ajaxSignup () {
         email: $('[data-id="signup-email"]').val(),
         role: 'student' // Temporary until we come up with a solution to identify instructors
       }
-    ).success(function () {
-      console.log("signup success")
+    ).success(function (data) {
+      var object = jQuery.parseJSON(data)
+      // console.log("signup success")
       // inform user of successful signup, hide and clear inputs.
-      console.log($('[data-id="first_name"]').val() + " successfully signed up.");
+      // console.log($('[data-id="first_name"]').val() + " successfully signed up.");
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
+      $(".currentUser").text(object['first_name'].toUpperCase());
     })
   })
 };
@@ -47,13 +49,15 @@ function enterSignup () {
           email: $('[data-id="signup-email"]').val(),
           role: 'student' // Temporary until we come up with a solution to identify instructors
         }
-      ).success(function () {
-        console.log("signup success")
+      ).success(function (data) {
+        var object = jQuery.parseJSON(data)
+        // console.log("signup success")
         // inform user of successful signup, hide and clear inputs.
-        console.log($('[data-id="first_name"]').val() + " successfully signed up.");
+        // console.log($('[data-id="first_name"]').val() + " successfully signed up.");
         $(".authContainer").hide();
         $("#signUpModal").hide();
         $("#logoutBtn").show();
+        $(".currentUser").text(object['first_name'].toUpperCase());
       });
     }
   });
