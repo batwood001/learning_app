@@ -5,6 +5,9 @@ function studentView () {
     $(".toggleStudentView").hide();
     $(".toggleTeacherView").show();
     $(".activeQuestions").hide();
+    $(".teacher-overview").hide();
+    // $(".sidebar").show();
+
   // })
 };
 

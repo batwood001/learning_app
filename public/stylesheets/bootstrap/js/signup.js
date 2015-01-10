@@ -24,6 +24,7 @@ function ajaxSignup () {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
+      // $(".sidebar").show();
       $(".currentUser").text(object['first_name'].toUpperCase());
     })
   })
