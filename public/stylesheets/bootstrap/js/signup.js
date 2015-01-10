@@ -1,5 +1,5 @@
 function ajaxSignup () {
-  $("#signupBtn").click(function() {
+  $('[data-id="sign-up-modal-button"]').click(function() {
     $("authContainer").hide();
 
     console.log("in signup")
