@@ -5,14 +5,14 @@ require 'sinatra/flash'
 require_relative 'config/environments.rb'
 
 # For le Mac users
-set :bind, '0.0.0.0'
+# set :bind, '0.0.0.0'
 enable :sessions
 
 get '/' do
   if session[:user_id]
 
   end
-  send_file 'index.html'
+  send_file 'public/index.html'
 end
 
 # /lectures/#/questions/#
@@ -26,11 +26,11 @@ post '/signup' do
     'password' => params['password'],
     'role' => params['role']
     })
-
-  if user_info.errors
-    flash[:error] = user_info.errors.messages
-    redirect to('/')
-  else
+  puts "this is user info: "
+  puts user_info
+  puts "before if"
+  if user_info['id']
+    puts "true conditional"
     session = {
       user_id: user_info['id'],
       first_name: user_info['first_name'],
@@ -38,7 +38,14 @@ post '/signup' do
       email: user_info['email'],
       role: user_info['role']
     }
-    redirect to('/lectures')
+    puts "session"
+    puts session
+    # redirect to('/lectures')
+  else
+    puts "in else"
+    flash[:error] = user_info.errors.messages
+    puts "after flash"
+    # redirect to('/')
   end
 end
 

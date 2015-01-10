@@ -1,6 +1,6 @@
 function ajaxSignup () {
-  $('[data-id="sign-up-modal-button"]').click(function() {
-    $("authContainer").hide();
+  $('#sign-up-modal-button').click(function() {
+    $(".authContainer").hide();
 
     console.log("in signup")
     $.post(
@@ -15,7 +15,7 @@ function ajaxSignup () {
     ).success(function () {
       console.log("signup success")
       // inform user of successful signup, hide and clear inputs.
-      console.log($('[data-id="username"]').val() + " successfully signed up.");
+      console.log($('[data-id="first_name"]').val() + " successfully signed up.");
       $(".authContainer").hide();
     })
   })

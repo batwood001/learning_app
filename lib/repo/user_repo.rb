@@ -1,6 +1,7 @@
 module LearningApp
   class UserRepo
     def self.create(user_info)
+      puts user_info
       user = User.new
       user.first_name = user_info['first_name']
       user.last_name = user_info['last_name']
@@ -8,7 +9,8 @@ module LearningApp
       user.password = user_info['password']
       user.role = user_info['role']
 
-      user.save ? self.get_by_user_id(user.id) : user.errors.messages
+      user.save
+      user.attributes
     end
 
     def self.validate_by_email_and_password(email, password)
