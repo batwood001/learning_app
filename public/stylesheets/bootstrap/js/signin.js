@@ -1,5 +1,4 @@
 function ajaxSignin() {
-  $("#signinBtn").click(function() {
   $("form.sign-in").click(function(e) {
     e.preventDefault()
     console.log("in click")
@@ -10,23 +9,20 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
-      data = data.replace(/:|{|}|,/g, '')
-      var array = data.split('"')
-      var user_data = []
-      for (var index in array){
-        if (array[index] !== ""){
-          user_data.push(array[index])
-        }
-      }
+      var object = jQuery.parseJSON(data)
       console.log("signin success")
+      console.log(object)
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      getLectures();
-      $("#currentUser").text[data['first_name']];
+      // getLectures();
+      $(".currentUser").text(object['first_name'].toUpperCase());
+      if(object['role'] == "student"){
+        studentView();
+      }
     })
   })
-};
+}
 
 
 ajaxSignin();
