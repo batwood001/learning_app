@@ -17,6 +17,8 @@ function ajaxSignup () {
       // inform user of successful signup, hide and clear inputs.
       console.log($('[data-id="first_name"]').val() + " successfully signed up.");
       $(".authContainer").hide();
+      $("#signUpModal").hide();
+      $("#logoutBtn").show();
     })
   })
 };

@@ -16,6 +16,8 @@ function ajaxSignin() {
       $(".spacerSignin").hide();
       $("#usernameSignin").val('');
       $("#passwordSignin").val('');
+      $("#signUpModal").hide();
+      $("#logoutBtn").show();
     })
   })
 };

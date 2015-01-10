@@ -40,12 +40,12 @@ post '/signup' do
     }
     puts "session"
     puts session
-    # redirect to('/lectures')
+    redirect to('/')
   else
     puts "in else"
     flash[:error] = user_info.errors.messages
     puts "after flash"
-    # redirect to('/')
+    redirect to('/')
   end
 end
 
