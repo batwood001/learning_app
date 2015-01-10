@@ -1,6 +1,5 @@
 function ajaxSignin() {
   $("#signinBtn").click(function() {
-    console.log("in click")
     $.post(
       "/signin",
       {
@@ -8,8 +7,6 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
-      console.log(typeof data);
-      console.log("signin success")
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
