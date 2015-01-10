@@ -15,12 +15,12 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      getLectures();
       $(".currentUser").text(object['first_name'].toUpperCase());
       console.log(object['role'])
       if(object['role'] === "student"){
         studentView();
         getStudentOverview();
+        populateStudentLandingPage();
       }
       else {
         teacherView();
