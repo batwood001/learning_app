@@ -1,8 +1,8 @@
-function hideMain () {
-  $("#lecture").click(function() {
-    $(".overview").hide();
-    $(".activeQuestions").show();
-  })
-};
+// function hideMain () {
+//   $("#lecture").click(function() {
+//     $(".student-overview").hide();
+//     $(".activeQuestions").show();
+//   })
+// };
 
-hideMain();
+// hideMain();
