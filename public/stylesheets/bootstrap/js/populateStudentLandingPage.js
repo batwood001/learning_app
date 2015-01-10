@@ -1,4 +1,4 @@
-function getLectures() {
+function populateStudentLandingPage() {
 	console.log("getLectures called")
 	$.get("/lectures", function ( data ) {
 		var parsed = jQuery.parseJSON( data );
