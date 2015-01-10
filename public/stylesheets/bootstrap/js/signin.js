@@ -15,7 +15,7 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      // getLectures();
+      getLectures();
       $(".currentUser").text(object['first_name'].toUpperCase());
       if(object['role'] == "student"){
         studentView();
