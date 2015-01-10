@@ -14,7 +14,10 @@ module LearningApp
     end
 
     def self.validate_by_email_and_password(email, password)
+      puts "******************#{email}*******************"
+      puts "******************#{password}*******************"
       user_info = User.find_by(email: email).attributes
+      puts "user_info inside of validate method: + #{user_info}"
 
       user_info['password'] == password ? self.get_by_user_id(user_info['id']) : false
     end

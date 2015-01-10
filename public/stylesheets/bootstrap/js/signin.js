@@ -4,18 +4,12 @@ function ajaxSignin() {
     $.post(
       "/signin",
       {
-      username: $("#usernameSignin").val(),
-      password: $("#passwordSignin").val()
+      email: $('[data-id="email"]').val(),
+      password: $('[data-id="password"]').val()
       }
-    ).success(function (token) {
-      console.log("signin success", token)
-      localStorage.setItem("apiToken", token)
-      // inform user of successful signup, hide and clear inputs.
-      alert($("#usernameSignin").val() + " successfully signed in.");
+    ).success(function () {
+      console.log("signin success")
       $(".authContainer").hide();
-      $(".spacerSignin").hide();
-      $("#usernameSignin").val('');
-      $("#passwordSignin").val('');
     })
   })
 };
