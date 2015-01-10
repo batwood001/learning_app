@@ -12,7 +12,21 @@ module LearningApp
     # For the lecture landing page: displays all questions and their answers per lecture topic
     def self.get_all_presented_lectures_questions_and_responses
       puts "getting all presented lectures and questions and responses"
-      Lecture.joins(:questions).joins(:responses).as_json#.where("lectures.presentation_state = 'presented'").as_json
+      Lecture.find_by_sql("SELECT
+                            lectures.id,
+                            lectures.topic, 
+                            questions.question, 
+                            questions.correct_answer, 
+                            responses.response 
+                          FROM 
+                            public.lectures, 
+                            public.questions, 
+                            public.responses
+                          WHERE 
+                            lectures.id = questions.lecture_id AND
+                            questions.id = responses.question_id AND
+                            lectures.presentation_state = 'presented'
+                          ;")
     end
 
     def self.get_lecture_id_and_topic_by_user_id(user_id)
