@@ -67,10 +67,8 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-          <button id='toggleTeacherView' type='submit' class='btn btn-warning toggleTeacherView' style='display:none'>Switch to Teacher View</button>
-          <button id='toggleStudentView' type='submit' class='btn btn-info toggleStudentView' >Switch to Student View</button>
-          <h3><span class="label label-default currentUser">User Name</span></h3>
-            <li class="active teacherOverviewLink"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li>
+          <h3><span class="label label-default currentUser" style="display:none">User Name</span></h3>
+            <li class="active teacherOverviewLink" style="display:none"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li>
             <li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
@@ -111,7 +109,7 @@
           <!-- </div> -->
 
           
-          <div class="table-responsive student-overview" id='overview'>
+          <div class="table-responsive student-overview" id='overview' style="display:none">
           <h2 class="page-header">Welcome</h2>
             <table class="table table-striped">
               <thead>
@@ -136,7 +134,7 @@
           </div>
 
           <form>
-            <div class="teacher-overview form-group" id='teach-overview'>
+            <div style="display:none" class="teacher-overview form-group" id='teach-overview'>
             <h2 class="page-header">Aloha, Bienvenido, Welkon, and Hello</h2>
               <label for="newLecture">New Lecture Title</label>
               <input type="text" class="form-control" id="newLectureName" placeholder="Enter lecture title/topic">
