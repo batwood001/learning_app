@@ -5,7 +5,7 @@ require 'sinatra/flash'
 require_relative 'config/environments.rb'
 
 # For le Mac users
-# set :bind, '0.0.0.0'
+set :bind, '0.0.0.0'
 enable :sessions
 
 get '/' do
@@ -53,10 +53,21 @@ post '/signin' do
   user_info = LearningApp::UserRepo.validate_by_email_and_password(params['email'],
     params['password'])
 
-  if user_info.errors
-    flash[:error] = user_info.errors.messages
-    redirect to('/')
-  else
+  # if user_info['id']
+  #   flash[:error] = user_info.errors.messages
+  #   redirect to('/')
+  # else
+  #   session = {
+  #     user_id: user_info['id'],
+  #     first_name: user_info['first_name'],
+  #     last_name: user_info['last_name'],
+  #     email: user_info['email'],
+  #     role: user_info['role']
+  #   }
+  #   redirect to('/lectures')
+  # end
+  if user_info['id']
+    puts "true conditional"
     session = {
       user_id: user_info['id'],
       first_name: user_info['first_name'],
@@ -64,9 +75,16 @@ post '/signin' do
       email: user_info['email'],
       role: user_info['role']
     }
+    puts "session"
+    puts session
+    return session
     redirect to('/lectures')
+  else
+    puts "in else"
+    flash[:error] = user_info.errors.messages
+    puts "after flash"
+    # redirect to('/')
   end
-  
 end
 
 get '/lectures' do
