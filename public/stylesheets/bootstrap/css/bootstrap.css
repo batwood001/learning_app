@@ -2941,6 +2941,7 @@ fieldset[disabled] .btn-success.active {
   color: #fff;
   background-color: #5bc0de;
   border-color: #46b8da;
+  float: right!important;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -2986,6 +2987,7 @@ fieldset[disabled] .btn-info.active {
   color: #fff;
   background-color: #f0ad4e;
   border-color: #eea236;
+  float: right!important;
 }
 .btn-warning:hover,
 .btn-warning:focus,
@@ -5521,6 +5523,7 @@ button.close {
   top: 0;
   right: 0;
   left: 0;
+  bottom: 0;
   background-color: #000;
 }
 .modal-backdrop.fade {
