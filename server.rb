@@ -69,15 +69,12 @@ post '/signin' do
   if user_info['id']
     puts "true conditional"
     session = {
-      user_id: user_info['id'],
-      first_name: user_info['first_name'],
-      last_name: user_info['last_name'],
-      email: user_info['email'],
-      role: user_info['role']
+      'user_id' => user_info['id'],
+      'first_name' => user_info['first_name'],
+      'last_name' => user_info['last_name'],
+      'email' => user_info['email'],
+      'role' => user_info['role']
     }
-    puts "session"
-    puts session
-    return session
     redirect to('/lectures')
   else
     puts "in else"

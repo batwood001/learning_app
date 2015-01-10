@@ -2,14 +2,17 @@ function ajaxSignup () {
   $('#sign-up-modal-button').click(function() {
     $(".authContainer").hide();
 
-    console.log("in signup")
+    console.log("in signup");
+    console.log("first_name: " + $('[data-id="first_name"]').val());
+    console.log("email: " + $('[data-id="email"]').val());
+    console.log("password: " + $('[data-id="password"]').val());
     $.post(
       "/signup",
       {
         first_name: $('[data-id="first_name"]').val(), 
         last_name: $('[data-id="last_name"]').val(), 
-        password: $('[data-id="password"]').val(),
-        email: $('[data-id="email"]').val(),
+        password: $('[data-id="signup-password"]').val(),
+        email: $('[data-id="signup-email"]').val(),
         role: 'student' // Temporary until we come up with a solution to identify instructors
       }
     ).success(function () {

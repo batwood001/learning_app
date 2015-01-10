@@ -10,14 +10,8 @@ function ajaxSignin() {
     ).success(function () {
       console.log("signin success")
       $(".authContainer").hide();
-<<<<<<< HEAD
-=======
-      $(".spacerSignin").hide();
-      $("#usernameSignin").val('');
-      $("#passwordSignin").val('');
       $("#signUpModal").hide();
       $("#logoutBtn").show();
->>>>>>> e0876904d68f41e157b2e701a9643b9427057b02
     })
   })
 };
