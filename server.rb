@@ -74,9 +74,7 @@ post '/signin' do
       last_name: user_info['last_name'],
       email: user_info['email'],
       role: user_info['role']
-    }
-    puts 'session'
-    puts session
+    }.to_json
     # redirect to('/')
   else
     puts "in else"
