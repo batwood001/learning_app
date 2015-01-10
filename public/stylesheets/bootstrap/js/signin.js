@@ -8,11 +8,12 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
+      console.log(typeof data);
       console.log("signin success")
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      $("#currentUser").text[data['first_name']];
+      $('.currentUser').text(data["first_name"]);
     })
   })
 };
