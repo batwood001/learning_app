@@ -51,7 +51,7 @@
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button id="signinBtn" type="submit" class="btn btn-success">Sign in</button>
-            <button id="signupBtn" type="submit" class="btn btn-success">Sign up</button>
+            <button id="signupBtn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign up</button>
           </form>
           </div>
         </div><!--/.navbar-collapse -->
@@ -345,6 +345,46 @@
               </div>
             </div>
           </div>
+          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="myModalLabel">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                  <form method='post' action='/signup'>
+                  <div class='input-group input-group-lg'>
+                    <input data-id='first_name' type='text' placeholder='First Name' class='form-control'>
+                  </div>
+                  <div class='input-group input-group-lg'>
+                    <input data-id='last-name' type='text' placeholder='Last Name' class='form-control'>
+                  </div>
+                  <div class='input-group input-group-lg'>
+                    <input data-id='email' type='text' placeholder='Email Address' class='form-control'>
+                  </div> 
+                  <div class='input-group input-group-lg'> 
+                    <input data-id='password' type='password' placeholder='Password' class='form-control'>
+                   
+                  </div>
+                  </form>
+                    
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Submit new question</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+
         </div>
       </div>
     </div>
