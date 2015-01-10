@@ -65,7 +65,8 @@
           <button id='toggleTeacherView' type='submit' class='btn btn-warning toggleTeacherView' style='display:none'>Switch to Teacher View</button>
           <button id='toggleStudentView' type='submit' class='btn btn-info toggleStudentView' >Switch to Student View</button>
           <h3><span class="label label-default">User Name</span></h3>
-            <li class="active"><a href="">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active teacherOverviewLink"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li>
+            <li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li> -->
@@ -110,7 +111,7 @@
           <!-- </div> -->
 
           
-          <div class="table-responsive overview" id='overview'>
+          <div class="table-responsive student-overview" id='overview'>
           <h2 class="page-header">Welcome</h2>
             <table class="table table-striped">
               <thead>
