@@ -13,7 +13,8 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      $('.currentUser').text(data["first_name"]);
+      getLectures();
+      $("#currentUser").text[data['first_name']];
     })
   })
 };
