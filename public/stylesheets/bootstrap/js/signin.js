@@ -17,8 +17,14 @@ function ajaxSignin() {
       $("#logoutBtn").show();
       getLectures();
       $(".currentUser").text(object['first_name'].toUpperCase());
-      if(object['role'] == "student"){
+      console.log(object['role'])
+      if(object['role'] === "student"){
         studentView();
+        getStudentOverview();
+      }
+      else {
+        teacherView();
+        getTeacherOverview();
       }
     })
   })
