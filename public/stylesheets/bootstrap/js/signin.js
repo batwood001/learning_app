@@ -9,7 +9,14 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
-      console.log(typeof data);
+      data = data.replace(/:|{|}|,/g, '')
+      var array = data.split('"')
+      var user_data = []
+      for (var index in array){
+        if (array[index] !== ""){
+          user_data.push(array[index])
+        }
+      }
       console.log("signin success")
       $(".authContainer").hide();
       $("#signUpModal").hide();
