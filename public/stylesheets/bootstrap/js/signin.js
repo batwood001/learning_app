@@ -22,10 +22,12 @@ function ajaxSignin() {
         studentView();
         getStudentOverview();
         populateStudentLandingPage();
+        populateLectureSidebar();
       }
       else {
         teacherView();
         getTeacherOverview();
+        populateLectureSidebar();
       }
     })
   })
