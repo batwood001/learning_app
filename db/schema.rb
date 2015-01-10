@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 20150108195313) do
 
   create_table "responses", force: true do |t|
     t.integer  "user_id"
+    t.integer  "lecture_id"
     t.integer  "question_id"
     t.string   "response"
     t.datetime "created_at"

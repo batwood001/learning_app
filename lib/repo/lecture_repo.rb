@@ -6,7 +6,13 @@ module LearningApp
       lecture.topic = topic
       lecture.presentation_state = 'not yet presented'
 
-      lecture.save ? true : false
+      lecture.save ? lecture.id : false
+    end
+
+    # For the lecture landing page: displays all questions and their answers per lecture topic
+    def self.get_all_presented_lectures_questions_and_responses
+      Lecture.joins(:questions).where("lectures.presentation_state = 'presented'")
+      .joins(:responses).as_json
     end
 
     def self.get_lecture_id_and_topic_by_user_id(user_id)
@@ -21,11 +27,6 @@ module LearningApp
     def self.set_inactive_by_lecture_id(lecture_id)
       lecture = Lecture.find_by(id: lecture_id)
       lecture.presentation_state == 'active' ? lecture.update(presentation_state: 'presented') : "Cannot inactivate lecture; lecture state is: #{lecture.presentation_state}"
-    end
-
-    # For the lecture landing page: displays all questions and their answers per lecture topic
-    def self.get_all_presented_lectures_and_questions
-      Lecture.joins(:questions).where("lectures.presentation_state = 'presented'").as_json
     end
   end
 end
