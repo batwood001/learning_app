@@ -10,7 +10,7 @@ enable :sessions
 
 get '/' do
   if session[:user_id]
-
+    puts 'Got a session yo'
   end
   send_file 'public/index.html'
 end
@@ -69,13 +69,15 @@ post '/signin' do
   if user_info['id']
     puts "true conditional"
     session = {
-      'user_id' => user_info['id'],
-      'first_name' => user_info['first_name'],
-      'last_name' => user_info['last_name'],
-      'email' => user_info['email'],
-      'role' => user_info['role']
+      user_id: user_info['id'],
+      first_name: user_info['first_name'],
+      last_name: user_info['last_name'],
+      email: user_info['email'],
+      role: user_info['role']
     }
-    redirect to('/lectures')
+    puts 'session'
+    puts session
+    # redirect to('/')
   else
     puts "in else"
     flash[:error] = user_info.errors.messages

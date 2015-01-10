@@ -1,6 +1,7 @@
 function ajaxSignin() {
-  $("#signinBtn").click(function() {
-    console.log("in click")
+  $("form.sign-in").on('submit', function(e) {
+    e.preventDefault()
+    console.log("in click2")
     $.post(
       "/signin",
       {
