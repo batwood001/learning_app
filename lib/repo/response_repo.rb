@@ -8,11 +8,12 @@ module LearningApp
       Response.find_by(user_id: user_id).attributes
     end
 
-    def create_response_by_user_id_and_question_id(user_id, question_id, response)
+    def self.create_response_by_user_id_and_question_id(user_id, lecture_id, question_id, response_text)
       response = Response.new
       response.user_id = user_id
+      response.lecture_id = lecture_id
       response.question_id = question_id
-      response.response = response
+      response.response = response_text
 
       response.save ? true : response.errors.messages
     end

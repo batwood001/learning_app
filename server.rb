@@ -88,6 +88,7 @@ end
 
 get '/lectures' do
   LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses
+  puts "#{LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses}"
 end
 
 post '/lectures' do
@@ -144,5 +145,5 @@ post '/lectures/:lecture_id/questions/:id/deactivate' do
 end
 
 post '/lectures/:lecture_id/questions/:question_id/response' do
-  LearningApp::ResponseRepo.create_response_by_user_id_and_question_id(session[:user_id], params['question_id'], params['response'])
+  LearningApp::ResponseRepo.create_response_by_user_id_and_question_id(session[:user_id], params['lecture_id'], params['question_id'], params['response'])
 end

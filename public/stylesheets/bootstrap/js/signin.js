@@ -13,6 +13,7 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
+      getLectures();
     })
   })
 };
