@@ -12,6 +12,7 @@ get '/' do
   if session[:user_id]
 
   end
+  send_file 'index.html'
 end
 
 # /lectures/#/questions/#
