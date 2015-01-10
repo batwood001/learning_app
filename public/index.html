@@ -11,12 +11,12 @@
     <title>Learning App</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="public/stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="public/stylesheets/dashboard.css" rel="stylesheet">
+    <link href="stylesheets/dashboard.css" rel="stylesheet">
 
-    <link href="public/stylesheets/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="stylesheets/sticky-footer-navbar.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -51,7 +51,7 @@
               <input type="password" placeholder="Password" class="form-control">
             </div>
             <button id="signinBtn" type="submit" class="btn btn-success">Sign in</button>
-            <button id="signupBtn" type="submit" class="btn btn-success">Sign up</button>
+            <button id="signupBtn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign up</button>
           </form>
           </div>
         </div><!--/.navbar-collapse -->
@@ -65,7 +65,8 @@
           <button id='toggleTeacherView' type='submit' class='btn btn-warning toggleTeacherView' style='display:none'>Switch to Teacher View</button>
           <button id='toggleStudentView' type='submit' class='btn btn-info toggleStudentView' >Switch to Student View</button>
           <h3><span class="label label-default">User Name</span></h3>
-            <li class="active"><a href="">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active teacherOverviewLink"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li>
+            <li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li>
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li> -->
@@ -110,7 +111,7 @@
           <!-- </div> -->
 
           
-          <div class="table-responsive student-overview">
+          <div class="table-responsive student-overview" id='overview'>
           <h2 class="page-header">Welcome</h2>
             <table class="table table-striped">
               <thead>
@@ -235,11 +236,11 @@
                   <td>in</td>
                   <td>libero</td>
                 </tr>
-                <tr class='add-question' >
+                <tr class='addQuestion' >
                   <td></td>
                   <td></td>
                   <td></td>
-                  <td></td>
+                  <td>            <button id="signupBtn" type="submit" class="btn btn-success" data-toggle="modal" data-target="#signUpModal">Sign up</button></td>
                   <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
                 </tr>
               </tbody>
@@ -272,11 +273,11 @@
 
               <div class='panel-footer'>
                 <div align='right'>
-                  <input type='submit' value='Submit'>
+                  <button type="button" class="btn btn-primary">Submit</button>
                 </div></div>
             </div>
           </div>
-
+<!-- Start of New Question Modal -->
           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -344,6 +345,49 @@
               </div>
             </div>
           </div>
+<!-- End of New Question Modal -->
+
+<!-- Start of Sign Up Modal -->
+          <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="signUpModalLabel">Sign Up</h4>
+                </div>
+                <div class="modal-body">
+                  <form method='post' action='/signup'>
+                    <div class='input-group input-group-lg'>
+                      <input data-id='first_name' type='text' placeholder='First Name' class='form-control'>
+                    </div>
+                    <div class='input-group input-group-lg'>
+                      <input data-id='last_name' type='text' placeholder='Last Name' class='form-control'>
+                    </div>
+                    <div class='input-group input-group-lg'>
+                      <input data-id='email' type='text' placeholder='Email Address' class='form-control'>
+                    </div> 
+                    <div class='input-group input-group-lg'> 
+                      <input data-id='password' type='password' placeholder='Password' class='form-control'>
+                     
+                    </div>
+                  </form>
+                    
+
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button id="sign-up-modal-button" type="button" class="btn btn-primary">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>
+<!-- End of Sign Up Modal -->
+
+
+
+
+
+
         </div>
       </div>
     </div>
@@ -358,11 +402,11 @@
     <!-- Bootstrap core JavaScript -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="public/stylesheets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="public/stylesheets/bootstrap/js/signin.js"></script>
-    <script src="public/stylesheets/bootstrap/js/signup.js"></script>
-    <script src='public/stylesheets/bootstrap/js/hi.js'></script>
-    <script src='public/stylesheets/bootstrap/js/teacherView.js'></script>
-    <script src='public/stylesheets/bootstrap/js/studentView.js'></script>
+    <script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="stylesheets/bootstrap/js/signin.js"></script>
+    <script src="stylesheets/bootstrap/js/signup.js"></script>
+    <script src='stylesheets/bootstrap/js/hi.js'></script>
+    <script src='stylesheets/bootstrap/js/teacherView.js'></script>
+    <script src='stylesheets/bootstrap/js/studentView.js'></script>
   </body>
 </html>

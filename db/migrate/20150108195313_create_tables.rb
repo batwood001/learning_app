@@ -33,6 +33,7 @@ class CreateTables < ActiveRecord::Migration
 
     create_table :responses do |t|
       t.integer :user_id
+      t.integer :lecture_id
       t.integer :question_id
       t.string :response
       t.timestamps

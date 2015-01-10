@@ -12,9 +12,26 @@ function currentQuestion () {
   $("#lecture").click(function() {
     $(".student-overview").hide();
     $(".addQuestion").hide();
+    $(".studentOverviewLink").show();
+    $(".teacherOverviewLink").hide();
+  })
+};
+
+function getStudentOverview () {
+  $(".studentOverviewLink").click(function() {
+  	$(".student-overview").show();
+  	$(".activeQuestions").hide();
+  })
+}
+
+function hideMain () {
+  $("#lecture").click(function() {
+    $(".student-overview").hide();
     $(".activeQuestions").show();
   })
 };
 
 studentView();
 currentQuestion();
+getStudentOverview();
+hideMain();

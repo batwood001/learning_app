@@ -5,7 +5,17 @@ function teacherView () {
     $(".toggleStudentView").show();
     $(".toggleTeacherView").hide();
     $(".activeQuestions").hide();
+  	$(".studentOverviewLink").hide();
+    $(".teacherOverviewLink").show();
   })
 };
 
+function getTeacherOverview () {
+  $(".teacherOverviewLink").click(function() {
+  	$(".student-overview").show();
+  	$(".activeQuestions").hide();
+  })
+}
+
 teacherView();
+getTeacherOverview();
