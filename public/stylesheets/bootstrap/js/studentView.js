@@ -1,11 +1,11 @@
 function studentView () {
-  $("#toggleStudentView").click(function() {
+  // $("#toggleStudentView").click(function() {
     $(".student-overview").show();
     $(".addQuestion").hide();
     $(".toggleStudentView").hide();
     $(".toggleTeacherView").show();
     $(".activeQuestions").hide();
-  })
+  // })
 };
 
 function currentQuestion () {
@@ -18,10 +18,12 @@ function currentQuestion () {
 };
 
 function getStudentOverview () {
-  $(".studentOverviewLink").click(function() {
+  // $(".studentOverviewLink").click(function() {
   	$(".student-overview").show();
   	$(".activeQuestions").hide();
-  })
+    $(".studentOverviewLink").show();
+    $(".teacherOverviewLink").hide();
+  // })
 }
 
 function hideMain () {

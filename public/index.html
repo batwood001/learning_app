@@ -42,7 +42,7 @@
           <a type="glyphicon" href="http://media.giphy.com/media/1478uRpTNZENmU/giphy.gif" class="glyphicon pull-left" aria-label="Left Align">
             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
           </a>
-          <a class="navbar-brand"> Learning App Yo</a>
+          <a class="navbar-brand"> Learning App</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -140,7 +140,14 @@
             </table>
           </div>
 
-
+          <form>
+            <div class="teacher-overview form-group" id='teach-overview'>
+            <h2 class="page-header">Aloha, Bienvenido, Welkon, and Hello</h2>
+              <label for="newLecture">New Lecture Title</label>
+              <input type="text" class="form-control" id="newLectureName" placeholder="Enter lecture title/topic">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+          </form>
 
           <div class="table-responsive overview activeQuestions col-md-8" style='display:none'>
             <h2 class="page-header">Current Question</h2>
@@ -296,11 +303,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
-    <script src='stylesheets/bootstrap/js/getLectures.js'></script>
+    <script src='stylesheets/bootstrap/js/populateStudentLandingPage.js'></script>
     <script src="stylesheets/bootstrap/js/signin.js"></script>
     <script src="stylesheets/bootstrap/js/signup.js"></script>
     <script src='stylesheets/bootstrap/js/hi.js'></script>
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
+    <script src='stylesheets/bootstrap/js/populateLectureSidebar.js'></script>
   </body>
 </html>
