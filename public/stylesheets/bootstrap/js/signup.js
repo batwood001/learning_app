@@ -1,4 +1,5 @@
 function ajaxSignup () {
+ 
   $('#sign-up-modal-button').click(function() {
     $(".authContainer").hide();
 
@@ -29,9 +30,6 @@ function ajaxSignup () {
 function enterSignup () {
   
   $('#signUpForm').keypress(function(e) {
-    
-    console.log('event',e);
-    
     if ((e.keyCode == 13) && (e.target.type != "textarea")) {
       e.preventDefault();
       $(".authContainer").hide();
