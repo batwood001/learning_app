@@ -15,7 +15,7 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      // $(".sidebar").show();
+      $(".sidebar").show();
       $(".currentUser").text(object['first_name'].toUpperCase());
       console.log(object['role'])
       if(object['role'] === "student"){

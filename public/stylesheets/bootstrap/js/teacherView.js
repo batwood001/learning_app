@@ -7,7 +7,7 @@ function teacherView () {
     $(".studentOverviewLink").hide();
     $(".teacherOverviewLink").show();
     $(".teacher-overview").show();
-    // $(".sidebar").show();
+    $(".sidebar").show();
 
 
   //   $(".teacherOverviewLink").show();
