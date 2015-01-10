@@ -85,8 +85,8 @@ post '/signin' do
 end
 
 get '/lectures' do
-  LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses
   puts "#{LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses}"
+  LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
 end
 
 post '/lectures' do
