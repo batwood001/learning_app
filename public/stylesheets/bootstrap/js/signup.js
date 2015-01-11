@@ -11,15 +11,15 @@ function ajaxSignup () {
     $.post(
       "/signup",
       {
-        first_name: $('[data-id="first_name"]').val(), 
-        last_name: $('[data-id="last_name"]').val(), 
+        first_name: $('[data-id="first_name"]').val(),
+        last_name: $('[data-id="last_name"]').val(),
         password: $('[data-id="signup-password"]').val(),
         email: $('[data-id="signup-email"]').val(),
         role: 'student' // Temporary until we come up with a solution to identify instructors
       }
     ).success(function (data) {
-      console.log(data)
-      var object = jQuery.parseJSON(data)
+      console.log(data);
+      var object = jQuery.parseJSON(data);
       // console.log("signup success")
       // inform user of successful signup, hide and clear inputs.
       // console.log($('[data-id="first_name"]').val() + " successfully signed up.");
@@ -30,12 +30,12 @@ function ajaxSignup () {
       $(".mainContent").show();
       $(".splash").hide();
       $(".sidebar").show();
-      $(".navBar").show(); 
-      $("#background").hide();     
+      $(".navBar").show();
+      $("#background").hide();
       $(".currentUser").text(object['first_name'].toUpperCase());
-    })
-  })
-};
+    });
+  });
+}
 
 function enterSignup () {
   
@@ -51,14 +51,14 @@ function enterSignup () {
       $.post(
         "/signup",
         {
-          first_name: $('[data-id="first_name"]').val(), 
-          last_name: $('[data-id="last_name"]').val(), 
+          first_name: $('[data-id="first_name"]').val(),
+          last_name: $('[data-id="last_name"]').val(),
           password: $('[data-id="signup-password"]').val(),
           email: $('[data-id="signup-email"]').val(),
           role: 'student' // Temporary until we come up with a solution to identify instructors
         }
       ).success(function (data) {
-        var object = jQuery.parseJSON(data)
+        var object = jQuery.parseJSON(data);
         // console.log("signup success")
         // inform user of successful signup, hide and clear inputs.
         // console.log($('[data-id="first_name"]').val() + " successfully signed up.");
@@ -75,7 +75,7 @@ function enterSignup () {
       });
     }
   });
-};
+}
 
 ajaxSignup();
 enterSignup();

@@ -9,7 +9,7 @@ function studentView () {
 
 
   // })
-};
+}
 
 // function currentQuestion () {
 //   $("#lecture").click(function() {

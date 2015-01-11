@@ -1,7 +1,7 @@
 function ajaxSignin() {
   $("form.sign-in").submit(function(e) {
-    e.preventDefault()
-    console.log("in click")
+    e.preventDefault();
+    console.log("in click");
     $.post(
       "/signin",
       {
@@ -9,9 +9,9 @@ function ajaxSignin() {
       password: $('[data-id="password"]').val()
       }
     ).success(function (data) {
-      var object = jQuery.parseJSON(data)
-      console.log("signin success")
-      console.log(object)
+      var object = jQuery.parseJSON(data);
+      console.log("signin success");
+      console.log(object);
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
@@ -22,7 +22,7 @@ function ajaxSignin() {
       $(".navBar").show();
       $("#background").hide();
       $(".currentUser").text(object['first_name'].toUpperCase());
-      console.log(object['role'])
+      console.log(object['role']);
       if(object['role'] === "student"){
         studentView();
         getStudentOverview();
@@ -34,8 +34,8 @@ function ajaxSignin() {
         getTeacherOverview();
         populateLectureSidebar();
       }
-    })
-  })
+    });
+  });
 }
 
 
