@@ -19,7 +19,7 @@
 }
 
 .table-striped > tbody > tr:nth-child(odd) {
-  background-color: #e0e0e0;
+  background-color: #e6e6e6;
 }
 
 .table-hover > tbody > tr:hover {
