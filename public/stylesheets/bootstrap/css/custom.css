@@ -1,0 +1,27 @@
+@media screen{
+  .splash {
+    font-size: 175px; opacity:0.7; margin-top:13%; margin-left:1%;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  .splash {
+    font-size: 80px;
+  }
+}
+
+.footer {
+  background-color: #c4c4c4;
+}
+
+.sidebar {
+    background-color: #c4c4c4;
+}
+
+.table-striped > tbody > tr:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+.table-hover > tbody > tr:hover {
+  background-color: #dcdcdc;
+}

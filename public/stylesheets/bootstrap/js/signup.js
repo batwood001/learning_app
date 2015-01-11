@@ -7,6 +7,7 @@ function ajaxSignup () {
     console.log("first_name: " + $('[data-id="first_name"]').val());
     console.log("email: " + $('[data-id="email"]').val());
     console.log("password: " + $('[data-id="password"]').val());
+   //the following should be turned in to a single function, because DRY
     $.post(
       "/signup",
       {
@@ -17,6 +18,7 @@ function ajaxSignup () {
         role: 'student' // Temporary until we come up with a solution to identify instructors
       }
     ).success(function (data) {
+      console.log(data)
       var object = jQuery.parseJSON(data)
       // console.log("signup success")
       // inform user of successful signup, hide and clear inputs.
@@ -27,6 +29,7 @@ function ajaxSignup () {
       $(".currentUser").show();
       $(".mainContent").show();
       $(".splash").hide();
+      $(".sidebar").show();
       $(".navBar").show();      
       $(".currentUser").text(object['first_name'].toUpperCase());
     })
@@ -63,6 +66,7 @@ function enterSignup () {
         $("#logoutBtn").show();
         $(".currentUser").show();
         $(".mainContent").show();
+        $(".sidebar").show();
         $(".navBar").show();
         $(".splash").hide();
         $(".currentUser").text(object['first_name'].toUpperCase());

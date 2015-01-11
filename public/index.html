@@ -8,7 +8,7 @@
     <meta name="author" content="">
     <link rel="icon" href="stylesheets/bootstrap/fonts">
 
-    <title>Learning App</title>
+    <title>Quiz Time</title>
 
     <!-- Bootstrap core CSS -->
     <link href="stylesheets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -17,6 +17,7 @@
     <link href="stylesheets/dashboard.css" rel="stylesheet">
 
     <link href="stylesheets/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="stylesheets/bootstrap/css/custom.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -42,7 +43,7 @@
           <a type="glyphicon" href="http://media.giphy.com/media/1478uRpTNZENmU/giphy.gif" class="glyphicon pull-left" aria-label="Left Align">
             <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
           </a>
-          <a class="navbar-brand"> Learning App</a>
+          <a class="navbar-brand"> Quiz Time</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <div class="authContainer">
@@ -65,7 +66,7 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar">
+        <div class="col-sm-3 col-md-2 sidebar" style="display:none">
           <ul class="nav nav-sidebar navBar" style='display:none'>
             <tr><h3><span class="label label-default currentUser" style="display:none">User Name</span></h3></tr>
             <tr><li class="active teacherOverviewLink" style='display:none'><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li></tr>
@@ -109,8 +110,8 @@
           <!-- </div> -->
 
           <div class="splash">
-            <span class="glyphicon glyphicon-send" aria-hidden="true" style='font-size:400px; opacity:0.7; margin-top:10%'></span>
-            <span style='font-size:150px; opacity:0.7'>Learning App.</span>
+            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
+            <span class="learning-title"> Quiz Time.</span>
           </div>
           
           <div class="mainContent" style="display:none">
