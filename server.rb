@@ -69,7 +69,7 @@ post '/lectures' do
 end
 
 get '/lectures/:id' do
-  if session[:role] == 'student'
+  if request.session["user_info"]["role"] == 'student'
     LearningApp::QuestionRepo.get_active_question
   else
     LearningApp::QuestionRepo.get_correct_answer_by_lecture_id(session[:lecture_id])
