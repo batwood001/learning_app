@@ -24,6 +24,9 @@ post '/signup' do
     'password' => params['password'],
     'role' => params['role']
     })
+  env["rack.session"][:user_info] = user_info
+  puts "rack session info", request.session["user_info"]
+  puts "rack session user role", request.session["user_info"]["role"]
   if user_info['id']
     session = {
       user_id: user_info['id'],
@@ -56,6 +59,7 @@ post '/signin' do
   #   }
   #   redirect to('/lectures')
   # end
+  env["rack.session"][:user_info] = user_info
   if user_info['id']
     session = {
       user_id: user_info['id'],
@@ -72,7 +76,7 @@ post '/signin' do
 end
 
 get '/lectures' do
-  if session[:role] == 'student'
+  if request.session["user_info"]["role"] == "student"
     LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
   else
     LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(session[:user_id]).to_json
