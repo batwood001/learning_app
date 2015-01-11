@@ -91,7 +91,7 @@ end
 post '/lectures' do
   lecture_id = LearningApp::LectureRepo.create_by_user_id_and_topic(session[:user_id], params['topic']) if session[:role] == 'instructor'
 
-  redirect to('/lectures/' + lecture_id)
+  # redirect to('/lectures/' + lecture_id)
 end
 
 get '/lectures/:id' do

@@ -30,7 +30,8 @@ function ajaxSignup () {
       $(".mainContent").show();
       $(".splash").hide();
       $(".sidebar").show();
-      $(".navBar").show();      
+      $(".navBar").show(); 
+      $("#background").hide();     
       $(".currentUser").text(object['first_name'].toUpperCase());
     })
   })
@@ -69,6 +70,7 @@ function enterSignup () {
         $(".sidebar").show();
         $(".navBar").show();
         $(".splash").hide();
+        $("#background").hide();
         $(".currentUser").text(object['first_name'].toUpperCase());
       });
     }
