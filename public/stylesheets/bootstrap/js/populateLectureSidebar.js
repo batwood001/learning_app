@@ -6,5 +6,5 @@ function populateLectureSidebar () {
 		parsed.forEach(function(lecture) {
 			$("#lecture").append("<li class='lecture-topic'><a href=# data-id='" + lecture["id"] + "'>" + lecture["topic"] + "</a></li>");
 		});
-	}
-);}
+	});
+}
