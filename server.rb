@@ -15,8 +15,6 @@ get '/' do
   send_file 'public/index.html'
 end
 
-# /lectures/#/questions/#
-
 post '/signup' do
 
   user_info = LearningApp::UserRepo.create({
@@ -26,11 +24,7 @@ post '/signup' do
     'password' => params['password'],
     'role' => params['role']
     })
-  puts "this is user info: "
-  puts user_info
-  puts "before if"
   if user_info['id']
-    puts "true conditional"
     session = {
       user_id: user_info['id'],
       first_name: user_info['first_name'],
@@ -38,13 +32,9 @@ post '/signup' do
       email: user_info['email'],
       role: user_info['role']
     }
-    puts "session"
-    puts session
     redirect to('/')
   else
-    puts "in else"
     flash[:error] = user_info.errors.messages
-    puts "after flash"
     redirect to('/')
   end
 end
@@ -67,7 +57,6 @@ post '/signin' do
   #   redirect to('/lectures')
   # end
   if user_info['id']
-    puts "true conditional"
     session = {
       user_id: user_info['id'],
       first_name: user_info['first_name'],
@@ -77,16 +66,17 @@ post '/signin' do
     }.to_json
     # redirect to('/')
   else
-    puts "in else"
     flash[:error] = user_info.errors.messages
-    puts "after flash"
     # redirect to('/')
   end
 end
 
 get '/lectures' do
-  puts "#{LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses}"
-  LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
+  if session[:role] == 'student'
+    LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
+  else
+    LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(session[:user_id]).to_json
+  end
 end
 
 post '/lectures' do

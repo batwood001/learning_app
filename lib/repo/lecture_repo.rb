@@ -30,7 +30,7 @@ module LearningApp
     end
 
     def self.get_lecture_id_and_topic_by_user_id(user_id)
-      Lecture.find_by(id: user_id).attributes
+      Lecture.where(user_id: user_id).as_json
     end
 
     def self.set_active_by_lecture_id(lecture_id)
