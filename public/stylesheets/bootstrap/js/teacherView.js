@@ -1,12 +1,15 @@
 function teacherView () {
   // $("#toggleTeacherView").click(function() {
-    $(".addQuestion").show();
     $(".student-overview").hide();
-    $(".toggleStudentView").show();
-    $(".toggleTeacherView").hide();
+    $(".addQuestion").show();
+    // $(".toggleStudentView").show();
+    // $(".toggleTeacherView").hide();
     $(".studentOverviewLink").hide();
     $(".teacherOverviewLink").show();
-    
+    $(".teacher-overview").show();
+    $(".sidebar").show();
+
+
   //   $(".teacherOverviewLink").show();
   // })
 };
