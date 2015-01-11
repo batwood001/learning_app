@@ -1,5 +1,5 @@
 function ajaxSignin() {
-  $("form.sign-in").click(function(e) {
+  $("form.sign-in").submit(function(e) {
     e.preventDefault()
     console.log("in click")
     $.post(
@@ -15,7 +15,10 @@ function ajaxSignin() {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      $(".sidebar").show();
+      $(".currentUser").show();
+      $(".mainContent").show();
+      $(".splash").hide();
+      $(".navBar").show();
       $(".currentUser").text(object['first_name'].toUpperCase());
       console.log(object['role'])
       if(object['role'] === "student"){

@@ -65,11 +65,11 @@
 
     <div class="container-fluid">
       <div class="row">
-        <div class="col-sm-3 col-md-2 sidebar" style="display:none">
-          <ul class="nav nav-sidebar sidebarNav">
-          <h3><span class="label label-default" >User Name</span></h3>
-            <li class="active teacherOverviewLink" style="display:none"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li>
-            <li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li>
+        <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar navBar" style='display:none'>
+            <tr><h3><span class="label label-default currentUser" style="display:none">User Name</span></h3></tr>
+            <tr><li class="active teacherOverviewLink" style='display:none'><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li></tr>
+            <tr><li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li></tr>
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
             <li><a href="#">Export</a></li> -->
@@ -108,29 +108,35 @@
             </div> -->
           <!-- </div> -->
 
+          <div class="splash">
+            <span class="glyphicon glyphicon-send" aria-hidden="true" style='font-size:400px; opacity:0.7; margin-top:10%'></span>
+            <span style='font-size:150px; opacity:0.7'>Learning App.</span>
+          </div>
           
-          <div class="table-responsive student-overview" id='overview' style="display:none">
-          <h2 class="page-header">Welcome</h2>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Lecture</th>
-                  <th>Question Link</th>
-                  <th>Correct Answer</th>
-                  <th>Your Answer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class='addQuestion' >
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="mainContent" style="display:none">
+          <div class="table-responsive student-overview" id='overview' >
+            <h2 class="page-header">Welcome</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Lecture</th>
+                    <th>Question Link</th>
+                    <th>Correct Answer</th>
+                    <th>Your Answer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class='addQuestion' >
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
           </div>
 
           <form class="submit-new-lecture">
@@ -140,7 +146,6 @@
               <input type="text" class="form-control" data-id="newLectureName" placeholder="Enter lecture title/topic">
               <button type="submit" class="btn btn-default">Submit</button>
             </div>
-
           </form>
 
           <div class="table-responsive overview activeQuestions col-md-8" style='display:none'>
@@ -289,7 +294,7 @@
 
     <footer class="footer">
       <div class="container">
-        <p class="text-muted text-center">Brought to you by the minds of Cluelesses</p>
+        <p class="text-muted text-center">Brought to you by the minds of <a href="https://www.youtube.com/watch?v=zHU2RlSCdxU">Cluelesses</a></p>
       </div>
     </footer>
 
