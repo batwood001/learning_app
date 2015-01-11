@@ -9,7 +9,7 @@ set :bind, '0.0.0.0'
 enable :sessions
 
 get '/' do
-  if session[:user_id]
+  if request.session['user_info']['id']
     puts 'Got a session yo'
   end
   send_file 'public/index.html'
@@ -58,14 +58,12 @@ get '/lectures' do
   if request.session["user_info"]["role"] == "student"
     LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
   else
-    LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(session[:user_id]).to_json
+    LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(request.session['user_info']['id']).to_json
   end
 end
 
 post '/lectures' do
-  lecture_id = LearningApp::LectureRepo.create_by_user_id_and_topic(session[:user_id], params['topic']) if session[:role] == 'instructor'
-
-  # redirect to('/lectures/' + lecture_id)
+  LearningApp::LectureRepo.create_by_user_id_and_topic(request.session['user_info']['id'], params['topic']) if request.session['user_info']['role'] == 'instructor'
 end
 
 get '/lectures/:id' do
@@ -116,5 +114,5 @@ post '/lectures/:lecture_id/questions/:id/deactivate' do
 end
 
 post '/lectures/:lecture_id/questions/:question_id/response' do
-  LearningApp::ResponseRepo.create_response_by_user_id_and_question_id(session[:user_id], params['lecture_id'], params['question_id'], params['response'])
+  LearningApp::ResponseRepo.create_response_by_user_id_and_question_id(request.session['user_info']['id'], params['lecture_id'], params['question_id'], params['response'])
 end
