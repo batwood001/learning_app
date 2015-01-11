@@ -18,6 +18,7 @@ function ajaxSignin() {
       $(".currentUser").show();
       $(".mainContent").show();
       $(".splash").hide();
+      $(".sidebar").show();
       $(".navBar").show();
       $(".currentUser").text(object['first_name'].toUpperCase());
       console.log(object['role'])
