@@ -11,16 +11,16 @@ function studentView () {
   // })
 };
 
-function currentQuestion () {
-  $("#lecture").click(function() {
-    $(".student-overview").hide();
-    $(".addQuestion").hide();
-    $(".studentOverviewLink").show();
-    $(".teacherOverviewLink").hide();
-    $(".activeQuestions").show();
-    getQuestion();
-  })
-};
+// function currentQuestion () {
+//   $("#lecture").click(function() {
+//     $(".student-overview").hide();
+//     $(".addQuestion").hide();
+//     $(".studentOverviewLink").show();
+//     $(".teacherOverviewLink").hide();
+//     $(".activeQuestions").show();
+//     getQuestion();
+//   })
+// };
 
 function getStudentOverview () {
   // $(".studentOverviewLink").click(function() {
@@ -38,6 +38,6 @@ function getStudentOverview () {
 // };
 
 studentView();
-currentQuestion();
+// currentQuestion();
 getStudentOverview();
 // hideMain();
