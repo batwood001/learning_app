@@ -42,9 +42,8 @@ post '/signin' do
     params['password'])
 
   if user_info['id']
-    # pertinent info of rack session cookie is in element 4 of its array
     env["rack.session"][:user_info] = user_info
-    session[3].to_json
+    session["user_info"].to_json
   else
     flash[:error] = user_info.errors.messages
   end
