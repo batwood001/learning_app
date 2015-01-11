@@ -24,8 +24,9 @@ function ajaxSignup () {
       $(".authContainer").hide();
       $("#signUpModal").hide();
       $("#logoutBtn").show();
-      // $(".sidebar").show();
-      $(".currentUser").text(object['first_name'].toUpperCase());
+      $(".currentUser").show();
+      $(".mainContent").show();
+      $(".navBar").show();      $(".currentUser").text(object['first_name'].toUpperCase());
     })
   })
 };
@@ -58,6 +59,9 @@ function enterSignup () {
         $(".authContainer").hide();
         $("#signUpModal").hide();
         $("#logoutBtn").show();
+        $(".currentUser").show();
+        $(".mainContent").show();
+        $(".navBar").show();
         $(".currentUser").text(object['first_name'].toUpperCase());
       });
     }
