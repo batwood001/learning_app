@@ -17,6 +17,7 @@ function ajaxSignup () {
         role: 'student' // Temporary until we come up with a solution to identify instructors
       }
     ).success(function (data) {
+      console.log(data)
       var object = jQuery.parseJSON(data)
       // console.log("signup success")
       // inform user of successful signup, hide and clear inputs.

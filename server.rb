@@ -31,8 +31,8 @@ post '/signup' do
       last_name: user_info['last_name'],
       email: user_info['email'],
       role: user_info['role']
-    }
-    redirect to('/')
+    }.to_json
+    # redirect to('/')
   else
     flash[:error] = user_info.errors.messages
     redirect to('/')
