@@ -26,6 +26,7 @@ function ajaxSignup () {
       $("#logoutBtn").show();
       $(".currentUser").show();
       $(".mainContent").show();
+      $(".splash".hide();
       $(".navBar").show();      $(".currentUser").text(object['first_name'].toUpperCase());
     })
   })
@@ -62,6 +63,7 @@ function enterSignup () {
         $(".currentUser").show();
         $(".mainContent").show();
         $(".navBar").show();
+        $(".splash".hide();
         $(".currentUser").text(object['first_name'].toUpperCase());
       });
     }
