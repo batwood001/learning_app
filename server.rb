@@ -77,6 +77,7 @@ end
 
 post "/signout" do 
   session.clear
+  200
 end
 
 get '/lectures' do
