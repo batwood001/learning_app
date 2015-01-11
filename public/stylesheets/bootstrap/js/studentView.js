@@ -17,26 +17,27 @@ function currentQuestion () {
     $(".addQuestion").hide();
     $(".studentOverviewLink").show();
     $(".teacherOverviewLink").hide();
+    $(".activeQuestions").show();
+    getQuestion();
   })
 };
 
 function getStudentOverview () {
   // $(".studentOverviewLink").click(function() {
-  	$(".student-overview").show();
-  	$(".activeQuestions").hide();
+    $(".student-overview").show();
+    $(".activeQuestions").hide();
     $(".studentOverviewLink").show();
     $(".teacherOverviewLink").hide();
   // })
 }
 
-function hideMain () {
-  $("#lecture").click(function() {
-    $(".student-overview").hide();
-    $(".activeQuestions").show();
-  })
-};
+// function hideMain () {
+//   $("#lecture").click(function() {
+//     $(".student-overview").hide();
+//   })
+// };
 
 studentView();
 currentQuestion();
 getStudentOverview();
-hideMain();
+// hideMain();

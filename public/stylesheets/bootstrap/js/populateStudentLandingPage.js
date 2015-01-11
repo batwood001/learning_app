@@ -2,6 +2,7 @@ function populateStudentLandingPage() {
 	console.log("getLectures called")
 	$.get("/lectures", function ( data ) {
 		var parsed = jQuery.parseJSON( data );
+		console.log("parsed JSON data from getStudentLandingPage: " + parsed)
 		parsed.forEach(function(lecture) {
 			$(".addQuestion").before(
 				"<tr><td>" + 
@@ -16,5 +17,5 @@ function populateStudentLandingPage() {
 				lecture["response"] + 
 				"</td></tr>")
 		})
-	}
-)}
+	})
+};

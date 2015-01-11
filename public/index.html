@@ -144,11 +144,11 @@
           </div>
           </div>
 
-          <form>
+          <form class="submit-new-lecture">
             <div style="display:none" class="teacher-overview form-group" id='teach-overview'>
             <h2 class="page-header">Aloha, Bienvenido, Welkon, and Hello</h2>
               <label for="newLecture">New Lecture Title</label>
-              <input type="text" class="form-control" id="newLectureName" placeholder="Enter lecture title/topic">
+              <input type="text" class="form-control" data-id="newLectureName" placeholder="Enter lecture title/topic">
               <button type="submit" class="btn btn-default">Submit</button>
             </div>
           </form>
@@ -161,17 +161,17 @@
               <div class="panel-body">
               </div>
               <!-- Question Text -->
-              <div class="well well-lg">Question text, here is a question.  You should answer it, and quickly.</div>
+              <div class="well well-lg question-text">Question text, here is a question.  You should answer it, and quickly.</div>
               <!-- Table -->
-              <div class="list-group">
-                <a href="#" class="list-group-item success">
+              <form class="list-group answer-options">
+<!--                 <a href="#" class="list-group-item success">
                   Answer A: Blah Blah Blah, blahbidy blah
                 </a>
                 <a href="#" class="list-group-item">Answer B: Dapibus ac facilisis in Dapibus ac facilisis in Dapibus ac facilisis inDapibus ac facilisis in</a>
                 <a href="#" class="list-group-item">Answer C: orbi leo risus orbi leo risusorbi leo risus orbi leo risus orbi leo risus</a>
                 <a href="#" class="list-group-item">Answer D: weoifj woeifj woeffh woefih wefoih wefoih wfeoih </a>
-                <a href="#" class="list-group-item">Answer E: Vestibulum at eros Vestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at erosVestibulum at erosVestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at eros</a>
-              </div>
+                <a href="#" class="list-group-item">Answer E: Vestibulum at eros Vestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at erosVestibulum at erosVestibulum at eros Vestibulum at eros Vestibulum at erosVestibulum at erosVestibulum at eros</a> -->
+              </form>
 
 
 
@@ -311,6 +311,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
+    <script src='stylesheets/bootstrap/js/submitNewLecture.js'></script>
     <script src='stylesheets/bootstrap/js/populateStudentLandingPage.js'></script>
     <script src='stylesheets/bootstrap/js/populateLectureSidebar.js'></script>
     <script src="stylesheets/bootstrap/js/signin.js"></script>
@@ -318,5 +319,6 @@
     <script src='stylesheets/bootstrap/js/hi.js'></script>
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
+    <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
   </body>
 </html>
