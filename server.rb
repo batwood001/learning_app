@@ -69,10 +69,10 @@ post '/lectures' do
 end
 
 get '/lectures/:id' do
-  if request.session["user_info"]["role"] == 'student'
-    LearningApp::QuestionRepo.get_active_question
+  if request.session["user_info"]["role"] == "student"
+    LearningApp::QuestionRepo.get_active_question.to_json
   else
-    LearningApp::QuestionRepo.get_correct_answer_by_lecture_id(session[:lecture_id])
+    LearningApp::QuestionRepo.get_correct_answer_by_lecture_id(session[:lecture_id]).to_json
   end
 end
 
