@@ -25,10 +25,8 @@ post '/signup' do
     'role' => params['role']
     })
 
-  # assign user info to rack session
-  env["rack.session"][:user_info] = user_info
-  
   if user_info['id']
+    # assign user info to rack session Charles N. Charge
     env["rack.session"][:user_info] = user_info
     session["user_info"].to_json
   else
