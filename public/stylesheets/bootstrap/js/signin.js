@@ -20,6 +20,7 @@ function ajaxSignin() {
       $(".splash").hide();
       $(".sidebar").show();
       $(".navBar").show();
+      $("#background").hide();
       $(".currentUser").text(object['first_name'].toUpperCase());
       console.log(object['role'])
       if(object['role'] === "student"){
