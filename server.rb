@@ -16,7 +16,7 @@ get '/' do
 end
 
 post '/signup' do
-
+  # build user info from form params
   user_info = LearningApp::UserRepo.create({
     'first_name' => params['first_name'],
     'last_name' => params['last_name'],
@@ -24,18 +24,13 @@ post '/signup' do
     'password' => params['password'],
     'role' => params['role']
     })
+
+  # assign user info to rack session
   env["rack.session"][:user_info] = user_info
-  puts "rack session info", request.session["user_info"]
-  puts "rack session user role", request.session["user_info"]["role"]
+  
   if user_info['id']
-    session = {
-      user_id: user_info['id'],
-      first_name: user_info['first_name'],
-      last_name: user_info['last_name'],
-      email: user_info['email'],
-      role: user_info['role']
-    }.to_json
-    # redirect to('/')
+    env["rack.session"][:user_info] = user_info
+    session["user_info"].to_json
   else
     flash[:error] = user_info.errors.messages
     redirect to('/')
@@ -46,32 +41,11 @@ post '/signin' do
   user_info = LearningApp::UserRepo.validate_by_email_and_password(params['email'],
     params['password'])
 
-  # if user_info['id']
-  #   flash[:error] = user_info.errors.messages
-  #   redirect to('/')
-  # else
-  #   session = {
-  #     user_id: user_info['id'],
-  #     first_name: user_info['first_name'],
-  #     last_name: user_info['last_name'],
-  #     email: user_info['email'],
-  #     role: user_info['role']
-  #   }
-  #   redirect to('/lectures')
-  # end
-  env["rack.session"][:user_info] = user_info
   if user_info['id']
-    session = {
-      user_id: user_info['id'],
-      first_name: user_info['first_name'],
-      last_name: user_info['last_name'],
-      email: user_info['email'],
-      role: user_info['role']
-    }.to_json
-    # redirect to('/')
+    env["rack.session"][:user_info] = user_info
+    session["user_info"].to_json
   else
     flash[:error] = user_info.errors.messages
-    # redirect to('/')
   end
 end
 
@@ -91,7 +65,7 @@ end
 post '/lectures' do
   lecture_id = LearningApp::LectureRepo.create_by_user_id_and_topic(session[:user_id], params['topic']) if session[:role] == 'instructor'
 
-  redirect to('/lectures/' + lecture_id)
+  # redirect to('/lectures/' + lecture_id)
 end
 
 get '/lectures/:id' do
