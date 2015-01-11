@@ -1,0 +1,97 @@
+<!--
+	*index.html
+	*author: Manivannan R
+	*project: Speedometer
+-->
+<html>
+<head>
+<link href="speedometer.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="cluelessness.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="stylesheets/bootstrap/js/speedometer.js"></script>
+<script>
+  var decrementClueless = 3;
+  var currentClueless = $("#clueless-values").val();
+  var incrementClueless = 10;
+
+  function moreCluelesness () {
+    currentClueless = $("#clueless-values").val();
+    currentClueless = parseInt(currentClueless) + incrementClueless;
+    // currentClueless += parseInt($("#clueless-values").val());
+    console.log( typeof currentClueless);
+    $("#clueless-values").val(currentClueless.toString());
+    $("#clueless-values").change(); 
+  }
+
+  function lessCluelessness() {
+    if ($("#clueless-values").val() > 0) {
+      console.log("in less clueless")
+      currentClueless = $("#clueless-values").val();
+      currentClueless -= decrementClueless;
+      $("#clueless-values").val(currentClueless);
+      $("#clueless-values").change();
+    }
+  }
+
+  function changeClueless() {
+    console.log("in change")
+    setInterval(lessCluelessness(), 3000);
+  }
+  setInterval(lessCluelessness(), 3000);
+</script>
+</head>
+<body onload="changeClueless()">
+	<div class="clueless-container">
+    <div class="clueless-indicator">
+      <input id="clueless-values" value="0" />
+    </div>
+    <div class="clueless-button">
+      <input type="button" id="im-clueless" value="I'm Clueless" />  
+    </div>
+  </div>
+</body>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="stylesheets/bootstrap/js/speedometer.js"></script> -->
+<script type="text/javascript">
+	$("#clueless-values").myfunc({divFact:10,eventListenerType:'change'});
+</script>
+<script>
+  // var decrementClueless = 3;
+  // var currentClueless = $("#clueless-values").val();
+  // var incrementClueless = 10;
+
+  // function moreCluelesness () {
+  //   currentClueless = $("#clueless-values").val();
+  //   currentClueless = parseInt(currentClueless) + incrementClueless;
+  //   // currentClueless += parseInt($("#clueless-values").val());
+  //   console.log( typeof currentClueless);
+  //   $("#clueless-values").val(currentClueless.toString());
+  //   $("#clueless-values").change(); 
+  // }
+
+  // function lessCluelessness() {
+  //   //currentClueless -= decrementClueless;
+  //   console.log("current clueless")
+  //   console.log(currentClueless);
+  //   console.log(typeof currentClueless)
+
+  //   if ($("#clueless-values").val() > 0) {
+  //     console.log("in less clueless")
+  //     currentClueless = $("#clueless-values").val();
+  //     currentClueless -= decrementClueless;
+  //     $("#clueless-values").val(currentClueless);
+  //     $("#clueless-values").change();
+  //   }
+  // }
+
+  // function changeClueless() {
+  //   console.log("in change")
+  //   setInterval(lessCluelessness(), 3000);
+  // }
+
+  $("#im-clueless").click(function() {
+    moreCluelesness();
+    //changeClueless();
+  })
+</script>
+</html>
