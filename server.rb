@@ -85,14 +85,15 @@ post '/signin' do
 end
 
 get '/lectures' do
-  puts "#{LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses}"
+  puts "this is from get lectures: #{LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses}"
   LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
 end
 
 post '/lectures' do
-  lecture_id = LearningApp::LectureRepo.create_by_user_id_and_topic(session[:user_id], params['topic']) if session[:role] == 'instructor'
-
-  redirect to('/lectures/' + lecture_id)
+  # lecture_id = LearningApp::LectureRepo.create_by_user_id_and_topic(session[:user_id], params['topic']) if session[:role] == 'instructor'
+  LearningApp::LectureRepo.create_by_user_id_and_topic(1, params['topic']) #if session[:role] == 'instructor'
+  status 200
+  # redirect to('/lectures/' + lecture_id)
 end
 
 get '/lectures/:id' do
