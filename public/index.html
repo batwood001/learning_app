@@ -66,9 +66,9 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
-          <ul class="nav nav-sidebar">
-          <tr><h3><span class="label label-default currentUser" style="display:none">User Name</span></h3></tr>
-            <tr><li class="active teacherOverviewLink"><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li></tr>
+          <ul class="nav nav-sidebar navBar" style='display:none'>
+            <tr><h3><span class="label label-default currentUser" style="display:none">User Name</span></h3></tr>
+            <tr><li class="active teacherOverviewLink" style='display:none'><a href="#">Lectures Overview (teacher)<span class="sr-only">(current)</span></a></li></tr>
             <tr><li class="active studentOverviewLink" style='display:none'><a href="#">Lectures Overview (student)<span class="sr-only">(current)</span></a></li></tr>
             <!-- <li><a href="#">Reports</a></li>
             <li><a href="#">Analytics</a></li>
@@ -109,28 +109,30 @@
           <!-- </div> -->
 
           
-          <div class="table-responsive student-overview" id='overview' style="display:none">
-          <h2 class="page-header">Welcome</h2>
-            <table class="table table-striped">
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>Lecture</th>
-                  <th>Question Link</th>
-                  <th>Correct Answer</th>
-                  <th>Your Answer</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class='addQuestion' >
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
-                </tr>
-              </tbody>
-            </table>
+          <div class="mainContent" style="display:none">
+          <div class="table-responsive student-overview" id='overview' >
+            <h2 class="page-header">Welcome</h2>
+              <table class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Lecture</th>
+                    <th>Question Link</th>
+                    <th>Correct Answer</th>
+                    <th>Your Answer</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class='addQuestion' >
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><button type="button" class="btn" data-toggle="modal" data-target="#myModal">Add New Question</button></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
           </div>
 
           <form>
