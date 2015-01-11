@@ -1,5 +1,5 @@
 function ajaxSignin() {
-  $("form.sign-in").click(function(e) {
+  $("form.sign-in").submit(function(e) {
     e.preventDefault()
     console.log("in click")
     $.post(
