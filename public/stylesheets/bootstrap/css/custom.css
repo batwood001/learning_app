@@ -1,0 +1,12 @@
+@media screen{
+  .splash {
+    font-size: 100px; opacity:0.7; margin-top:10%;
+  }
+}
+
+@media screen and (max-width: 824px) {
+  .splash {
+    font-size: 40px;
+  }
+}
+
