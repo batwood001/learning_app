@@ -7,6 +7,7 @@ function studentView () {
     $(".toggleTeacherView").show();
     $(".activeQuestions").hide();
     $(".teacher-overview").hide();
+    $(".addQuestionButton").hide();
 
 
   // })
@@ -30,6 +31,7 @@ function getStudentOverview () {
     $(".activeQuestions").hide();
     $(".studentOverviewLink").show();
     $(".teacherOverviewLink").hide();
+    $(".addQuestionButton").hide();
   // })
 }
 

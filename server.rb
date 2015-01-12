@@ -9,9 +9,9 @@ set :bind, '0.0.0.0'
 enable :sessions
 
 get '/' do
-  if request.session['user_info']['id']
-    puts 'Got a session yo'
-  end
+  # if request.session['user_info']['id']
+  #   puts 'Got a session yo'
+  # end
   send_file 'public/index.html'
 end
 
@@ -49,7 +49,7 @@ end
 
 post "/signout" do 
   session.clear
-  200
+  redirect to('/')
 end
 
 get '/lectures' do

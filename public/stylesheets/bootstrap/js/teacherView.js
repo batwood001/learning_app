@@ -1,7 +1,7 @@
 function teacherView () {
   // $("#toggleTeacherView").click(function() {
     $(".student-overview").hide();
-    $(".addQuestion").show();
+    $(".addQuestionButton").show();
     // $(".toggleStudentView").show();
     // $(".toggleTeacherView").hide();
     $(".studentOverviewLink").hide();
@@ -16,10 +16,11 @@ function teacherView () {
 
 function getTeacherOverview () {
   $(".teacherOverviewLink").click(function() {
-  	$(".student-overview").show();
+  	$(".student-overview").hide();
   	$(".activeQuestions").hide();
     $(".studentOverviewLink").hide();
     $(".teacherOverviewLink").show();
+    $(".addQuestionButton").show();
   })
 }
 

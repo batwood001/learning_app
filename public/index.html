@@ -58,7 +58,7 @@
             </form>
             <button id="signupBtn" type="submit" class="btn btn-info navbar-btn pull-right" data-toggle="modal" data-target="#signUpModal">Sign up</button>
           </div>
-          <form class='sign-out'>
+          <form class='sign-out' action='/signout' method='POST'>
             <button id="logoutBtn" type="submit" class="btn btn-warning navbar-btn pull-right" style='display:none' href="/">Log Out</button>
           </form>
         </div><!--/.navbar-collapse -->
@@ -153,6 +153,8 @@
             </div>
           </form>
 
+          <button type="button" class="btn addQuestionButton" data-toggle="modal" data-target="#myModal" style="display:none">Add New Question</button>
+
           <div class="table-responsive overview activeQuestions col-md-8" style='display:none'>
             <h2 class="page-header">Current Question</h2>
             <div class="panel panel-primary">
@@ -177,7 +179,7 @@
 
               <div class='panel-footer'>
                 <div align='right'>
-                  <button type="button" class="btn btn-primary">Submit</button>
+                  <button type="submit" class="btn btn-primary quizAnswer">Submit</button>
                 </div></div>
             </div>
           </div>
@@ -317,6 +319,7 @@
     <script src='stylesheets/bootstrap/js/populateLectureSidebar.js'></script>
     <script src="stylesheets/bootstrap/js/signin.js"></script>
     <script src="stylesheets/bootstrap/js/signup.js"></script>
+    <script src="stylesheets/bootstrap/js/signout.js"></script>
     <script src='stylesheets/bootstrap/js/hi.js'></script>
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
