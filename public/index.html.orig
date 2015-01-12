@@ -196,6 +196,7 @@
                     <div class="form-group">
                       <textarea class="question-input-text form-control" id="new-question" rows="3" placeholder="Enter new question here"></textarea>
                     </div>
+                  </form>
                   <div class="input-group">
                     <span class="input-group-addon" id="A">A</span>
                     <input type="text" class="question-input-a form-control" placeholder="Answer A" aria-describedby="basic-addon1">
@@ -245,12 +246,11 @@
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  <button type="submit" class="btn btn-primary">Submit new question</button>
+                  <button type="button" class="btn btn-primary">Submit new question</button>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
-        </div>
 <!-- End of New Question Modal -->
 
 <!-- Start of Sign Up Modal -->
@@ -315,6 +315,7 @@
     <script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
     <script src='stylesheets/bootstrap/js/submitNewLecture.js'></script>
     <script src='stylesheets/bootstrap/js/populateStudentLandingPage.js'></script>
+    <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
     <script src='stylesheets/bootstrap/js/populateLectureSidebar.js'></script>
     <script src="stylesheets/bootstrap/js/signin.js"></script>
     <script src="stylesheets/bootstrap/js/signup.js"></script>
@@ -322,6 +323,7 @@
     <script src='stylesheets/bootstrap/js/hi.js'></script>
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
+<<<<<<< HEAD
     <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
     <script src='stylesheets/bootstrap/js/submitQuestion.js'></script>
     <script type="text/javascript">
@@ -333,6 +335,18 @@
       studentView();
       getStudentOverview();
       submitQuestion();
+=======
+    <script type="text/javascript">
+      $(document).ready(function(){
+        ajaxSignin();
+        ajaxSignout();
+        ajaxSignup();
+        enterSignup();
+        getQuestion();
+        studentView();
+        getStudentOverview();
+      })
+>>>>>>> f054d3047540363a7f94e3bda2b175c17a6631d0
     </script>
   </body>
 </html>

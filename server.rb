@@ -82,7 +82,7 @@ end
 
 post '/lectures/questions' do
   question_info = {
-    'lecture_id' => session[:lecture_id],
+    'lecture_id' => params['lecture_id'],
     'question' => params['question'],
     'answer_one' => params['answer_one'],
     'answer_two' => params['answer_two'],
@@ -94,7 +94,7 @@ post '/lectures/questions' do
     'answer_eight' => params['answer_eight'],
     'correct_answer' => params['correct_answer'],
   }
-  LearningApp::QuestionRepo.create_by_lecture_id(question_info)
+  LearningApp::QuestionRepo.create_by_lecture_id(question_info).to_json
 
   # redirect to('lectures/:id')
 end
