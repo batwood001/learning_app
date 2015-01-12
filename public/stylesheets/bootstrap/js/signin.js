@@ -28,7 +28,7 @@ function ajaxSignin() {
         getStudentOverview();
         populateStudentLandingPage();
         populateLectureSidebar();
-        getQuestion();
+        // getQuestion();
       }
       else {
         teacherView();
