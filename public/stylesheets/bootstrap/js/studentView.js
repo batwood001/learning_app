@@ -37,7 +37,7 @@ function getStudentOverview () {
 //   })
 // };
 
-studentView();
+// studentView();
 // currentQuestion();
-getStudentOverview();
+// getStudentOverview();
 // hideMain();
