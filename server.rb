@@ -53,11 +53,13 @@ post "/signout" do
 end
 
 get '/lectures' do
-  if request.session["user_info"]["role"] == "student"
-    LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
-  else
-    LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(request.session['user_info']['id']).to_json
-  end
+  # if request.session["user_info"]["role"] == "student"
+    # LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
+  # else
+    # LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(request.session['user_info']['id']).to_json
+    LearningApp::LectureRepo.get_lecture_id_and_topic_by_user_id(2).to_json
+
+  # end
 end
 
 post '/lectures' do
@@ -65,11 +67,11 @@ post '/lectures' do
 end
 
 get '/lectures/:id' do
-  if request.session["user_info"]["role"] == "student"
+  # if request.session["user_info"]["role"] == "student"
     LearningApp::QuestionRepo.get_active_question.to_json
-  else
-    LearningApp::QuestionRepo.get_correct_answer_by_lecture_id(session[:lecture_id]).to_json
-  end
+  # else
+    # LearningApp::QuestionRepo.get_correct_answer_by_lecture_id(1).to_json
+  # end
 end
 
 post '/lectures/:id/activate' do

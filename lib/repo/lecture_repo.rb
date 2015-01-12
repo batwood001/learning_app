@@ -4,7 +4,7 @@ module LearningApp
       lecture = Lecture.new
       lecture.user_id = user_id
       lecture.topic = topic
-      lecture.presentation_state = 'not yet presented'
+      lecture.presentation_state = 'presented'
 
       lecture.save ? lecture.id : false
     end

@@ -15,7 +15,7 @@ module LearningApp
       question.answer_eight = question_info['answer_eight'] if question_info['answer_eight']
 
       question.correct_answer = question_info['correct_answer']
-      question.presentation_state = 'not yet presented'
+      question.presentation_state = 'active'
 
       question.save ? true : question.errors.messages
     end
