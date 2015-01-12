@@ -313,21 +313,23 @@
     <script src="stylesheets/bootstrap/js/bootstrap.min.js"></script>
     <script src='stylesheets/bootstrap/js/submitNewLecture.js'></script>
     <script src='stylesheets/bootstrap/js/populateStudentLandingPage.js'></script>
+    <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
     <script src='stylesheets/bootstrap/js/populateLectureSidebar.js'></script>
     <script src="stylesheets/bootstrap/js/signin.js"></script>
     <script src="stylesheets/bootstrap/js/signup.js"></script>
     <script src='stylesheets/bootstrap/js/hi.js'></script>
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
-    <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
     <script type="text/javascript">
-      ajaxSignin();
-      ajaxSignout();
-      ajaxSignup();
-      enterSignup();
-      getQuestion();
-      studentView();
-      getStudentOverview();
+      $(document).ready(function(){
+        ajaxSignin();
+        ajaxSignout();
+        ajaxSignup();
+        enterSignup();
+        getQuestion();
+        studentView();
+        getStudentOverview();
+      })
     </script>
   </body>
 </html>

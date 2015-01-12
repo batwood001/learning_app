@@ -18,4 +18,6 @@ function populateStudentLandingPage() {
 				"</td></tr>");
 		});
 	});
+	// getQuestion();
+	console.log("getQuestion called")
 }
