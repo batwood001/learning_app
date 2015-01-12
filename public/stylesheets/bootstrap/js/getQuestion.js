@@ -18,7 +18,7 @@ function getQuestion() {
 			$(".answer-options").find('a').remove();
 			for (var element in numbers) {
 				if (parsed['answer_' + numbers[element]]) {
-					$(".answer-options-bottom").before("<a href='#' class='answer-" + numbers[element] + " list-group-item' data-id='" + letters[element] + "'>" + parsed['answer_' + numbers[element]] + "</a>");
+					$(".answer-options-bottom").before("<a href='#' class='question-answer list-group-item' data-id='" + letters[element] + "'>" + parsed['answer_' + numbers[element]] + "</a>");
 				}
 			}
 		});
@@ -26,8 +26,10 @@ function getQuestion() {
 		$(this).addClass('selected-lecture');
 	});
 
-	$(document).on("click", "a.answer-options-bottom", function(e) {
-		$("a.answer-options-bottom").removeClass('selected-answer');
+	$(document).on("click", "a.question-answer", function(e) {
+		console.log("HUWRFHIUERIUFHERIUHGHIRU")
+		e.preventDefault();
+		$("a.question-answer").removeClass('selected-answer');
 		$(this).addClass('selected-answer');
 	});
 }
