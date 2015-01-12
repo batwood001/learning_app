@@ -1,4 +1,5 @@
 function getQuestion() {
+	console.log("getQuestion is called for the first time")
 	$(document).on("click", ".lecture-topic", function(e) {
 		e.preventDefault();
 		// $(".addQuestion").hide();

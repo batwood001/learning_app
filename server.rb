@@ -128,3 +128,7 @@ end
 post '/lectures/response' do
   LearningApp::ResponseRepo.create_response_by_user_id_and_question_id(request.session['user_info']['id'], params['lecture_id'], params['question_id'], params['response'])
 end
+
+after do
+  ActiveRecord::Base.connection.close
+end
