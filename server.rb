@@ -49,7 +49,7 @@ end
 
 post "/signout" do 
   session.clear
-  200
+  redirect to('/')
 end
 
 get '/lectures' do
