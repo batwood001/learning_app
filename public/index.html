@@ -192,42 +192,42 @@
                   <h4 class="modal-title" id="myModalLabel">New Question</h4>
                 </div>
                 <div class="modal-body">
-                  <form>
+                  <form class="submitQuestion">
                     <div class="form-group">
-                      <textarea class="form-control" id="new-question" rows="3" placeholder="Enter new question here"></textarea>
+                      <textarea class="question-input-text form-control" id="new-question" rows="3" placeholder="Enter new question here"></textarea>
                     </div>
                   </form>
                   <div class="input-group">
                     <span class="input-group-addon" id="A">A</span>
-                    <input type="text" class="form-control" placeholder="Answer A" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-a form-control" placeholder="Answer A" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="B">B</span>
-                    <input type="text" class="form-control" placeholder="Answer B" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-b form-control" placeholder="Answer B" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="C">C</span>
-                    <input type="text" class="form-control" placeholder="Answer C" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-c form-control" placeholder="Answer C" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="D">D</span>
-                    <input type="text" class="form-control" placeholder="Answer D" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-d form-control" placeholder="Answer D" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="E">E</span>
-                    <input type="text" class="form-control" placeholder="Answer E" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-e form-control" placeholder="Answer E" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="F">F</span>
-                    <input type="text" class="form-control" placeholder="Answer F" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-f form-control" placeholder="Answer F" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="G">G</span>
-                    <input type="text" class="form-control" placeholder="Answer G" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-g form-control" placeholder="Answer G" aria-describedby="basic-addon1">
                   </div>
                   <div class="input-group">
                     <span class="input-group-addon" id="H">H</span>
-                    <input type="text" class="form-control" placeholder="Answer H" aria-describedby="basic-addon1">
+                    <input type="text" class="question-input-h form-control" placeholder="Answer H" aria-describedby="basic-addon1">
                   </div>
                   <br>
                   <div id="selected" class="form-group">
@@ -323,6 +323,7 @@
     <script src='stylesheets/bootstrap/js/teacherView.js'></script>
     <script src='stylesheets/bootstrap/js/studentView.js'></script>
     <script src='stylesheets/bootstrap/js/getQuestion.js'></script>
+    <script src='stylesheets/bootstrap/js/submitQuestion.js'></script>
     <script type="text/javascript">
       ajaxSignin();
       ajaxSignout();
@@ -331,6 +332,7 @@
       getQuestion();
       studentView();
       getStudentOverview();
+      submitQuestion();
     </script>
   </body>
 </html>

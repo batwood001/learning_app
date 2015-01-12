@@ -80,7 +80,7 @@ post '/lectures/:id/deactivate' do
   LearningApp::LectureRepo.set_inactive_by_lecture_id(params['lecture_id'])
 end
 
-post '/lectures/:id/questions' do
+post '/lectures/questions' do
   question_info = {
     'lecture_id' => session[:lecture_id],
     'question' => params['question'],
@@ -96,7 +96,7 @@ post '/lectures/:id/questions' do
   }
   LearningApp::QuestionRepo.create_by_lecture_id(question_info)
 
-  redirect to('lectures/:id')
+  # redirect to('lectures/:id')
 end
 
 get '/lectures/:lecture_id/questions/:id' do
