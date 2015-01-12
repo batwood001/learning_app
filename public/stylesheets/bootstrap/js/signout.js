@@ -3,9 +3,9 @@ function ajaxSignout() {
     e.preventDefault();
     $.post(
       "/signout",{}
-    ).complete(function (data) {
+    ).success(function (data) {
       console.log("signout success");
-      console.log(object);
+      // console.log(object);
       $(".authContainer").show();
       $("#signUpModal").show();
       $("#logoutBtn").hide();
@@ -13,7 +13,7 @@ function ajaxSignout() {
       $(".mainContent").hide();
       $(".splash").show();
       $(".navBar").hide();
-      console.log(object['role']);
+      // console.log(object['role']);
     });
   });
 }
