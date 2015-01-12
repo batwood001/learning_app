@@ -22,15 +22,18 @@ function ajaxSignin() {
       $(".navBar").show();
       $("#background").hide();
       $(".currentUser").text(object['first_name'].toUpperCase());
+      $(".overview-role").attr("data-id", object['role'])
       console.log(object['role']);
       if(object['role'] === "student"){
+        console.log("a student logged in")
         studentView();
         getStudentOverview();
         populateStudentLandingPage();
         populateLectureSidebar();
         // getQuestion();
       }
-      else {
+      else if (object['role'] === "instructor"){
+        console.log("an instructor logged in")
         teacherView();
         getTeacherOverview();
         populateLectureSidebar();

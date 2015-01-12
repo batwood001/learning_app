@@ -52,9 +52,9 @@ module LearningApp
     end
 
     # display to students
-    def self.get_active_question 
-      question = Question.find_by(presentation_state: 'active').attributes
-      question.delete('correct_answer')
+    def self.get_active_question(lecture_id) 
+      question = Question.where(presentation_state: 'active', lecture_id: lecture_id).as_json
+      question.first.delete('correct_answer')
       question
     end
   end

@@ -11,6 +11,7 @@ function submitNewLecture() {
 			console.log("lecture successfully committed")
 			populateLectureSidebar();
 			getTeacherOverview(); // ...for now
+			$('[data-id="newLectureName"]').val('')
 		})
 	})
 }

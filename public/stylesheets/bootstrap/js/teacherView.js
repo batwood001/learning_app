@@ -1,12 +1,14 @@
 function teacherView () {
   // $("#toggleTeacherView").click(function() {
     $(".student-overview").hide();
-    $(".addQuestionButton").show();
+    $(".addQuestionButton").hide();
     // $(".toggleStudentView").show();
     // $(".toggleTeacherView").hide();
     $(".studentOverviewLink").hide();
     $(".teacherOverviewLink").show();
     $(".teacher-overview").show();
+    $(".activeQuestions").hide();
+    // $(".addQuestionButton").show();
 
 
 

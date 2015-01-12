@@ -1,11 +1,11 @@
 development:
   adapter: postgresql
   database: learning_app_dev
-  pool: 5
-  timeout: 5000
+  pool: 99999999
+  timeout: 15000
 
 test:
   adapter: postgresql
   database: learning_app_test
-  pool: 5
-  timeout: 5000
+  pool: 99999999
+  timeout: 15000
