@@ -20,6 +20,8 @@ function getQuestion() {
 				}
 			}
 		});
+		$(".lecture-topic").removeClass('selected-lecture')
+		$(this).addClass('selected-lecture')
 	});
 }
 // getQuestion();
