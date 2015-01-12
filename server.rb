@@ -25,10 +25,8 @@ post '/signup' do
     'role' => params['role']
     })
 
-  # assign user info to rack session
-  env["rack.session"][:user_info] = user_info
-  
   if user_info['id']
+    # assign user info to rack session Charles N. Charge
     env["rack.session"][:user_info] = user_info
     session["user_info"].to_json
   else
@@ -63,7 +61,7 @@ get '/lectures' do
 end
 
 post '/lectures' do
-  LearningApp::LectureRepo.create_by_user_id_and_topic(request.session['user_info']['id'], params['topic']) if request.session['user_info']['role'] == 'instructor'
+  LearningApp::LectureRepo.create_by_user_id_and_topic(request.session['user_info']['id'], params['topic']).to_json if request.session['user_info']['role'] == 'instructor'
 end
 
 get '/lectures/:id' do
