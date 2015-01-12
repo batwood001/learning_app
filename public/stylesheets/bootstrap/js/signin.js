@@ -39,4 +39,4 @@ function ajaxSignin() {
 }
 
 
-ajaxSignin();
+// ajaxSignin();

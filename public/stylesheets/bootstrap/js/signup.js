@@ -77,5 +77,5 @@ function enterSignup () {
   });
 }
 
-ajaxSignup();
-enterSignup();
+// ajaxSignup();
+// enterSignup();
