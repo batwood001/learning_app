@@ -8,6 +8,7 @@ function submitNewLecture() {
 			topic: $('[data-id="newLectureName"]').val()
 			}	
 		).success(function(){
+			console.log("lecture successfully committed")
 			populateLectureSidebar();
 			getTeacherOverview(); // ...for now
 		})
