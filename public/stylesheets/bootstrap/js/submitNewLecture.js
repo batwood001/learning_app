@@ -1,5 +1,5 @@
 function submitNewLecture() {
-	$("form.submit-new-lecture").click(function(e) {
+	$("form.submit-new-lecture").submit(function(e) {
 		e.preventDefault()
 		console.log("new lecture submitting")
 		$.post(

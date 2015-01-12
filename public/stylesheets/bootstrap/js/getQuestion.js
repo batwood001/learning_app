@@ -1,5 +1,5 @@
-function getQuestion () {
-	$(".lecture-topic").click(function(e) {
+function getQuestion() {
+	$(document).on("click", ".lecture-topic", function(e) {
 		e.preventDefault();
 		$(".student-overview").hide();
 		$(".addQuestion").hide();
@@ -20,7 +20,8 @@ function getQuestion () {
 				}
 			}
 		});
+		$(".lecture-topic").removeClass('selected-lecture')
+		$(this).addClass('selected-lecture')
 	});
 }
-
 // getQuestion();

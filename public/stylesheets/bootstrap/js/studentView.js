@@ -1,5 +1,6 @@
 function studentView () {
   // $("#toggleStudentView").click(function() {
+    console.log("studentView called")
     $(".student-overview").show();
     $(".addQuestion").hide();
     $(".toggleStudentView").hide();
@@ -25,6 +26,7 @@ function studentView () {
 
 function getStudentOverview () {
   // $(".studentOverviewLink").click(function() {
+    console.log("getStudentOverview called")
     $(".student-overview").show();
     $(".activeQuestions").hide();
     $(".studentOverviewLink").show();
