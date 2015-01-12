@@ -16,10 +16,11 @@ function teacherView () {
 
 function getTeacherOverview () {
   $(".teacherOverviewLink").click(function() {
-  	$(".student-overview").show();
+  	$(".student-overview").hide();
   	$(".activeQuestions").hide();
     $(".studentOverviewLink").hide();
     $(".teacherOverviewLink").show();
+    $(".addQuestionButton").show();
   })
 }
 
