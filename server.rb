@@ -52,6 +52,10 @@ post "/signout" do
   redirect to('/')
 end
 
+get '/lectures/responses' do
+  LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json
+end
+
 get '/lectures' do
   # if request.session["user_info"]["role"] == "student"
     # LearningApp::LectureRepo.get_all_presented_lectures_questions_and_responses.to_json

@@ -1,11 +1,11 @@
 function populateStudentLandingPage() {
 	console.log("getLectures called");
-	$.get("/lectures", function ( data ) {
+	$.get("/lectures/responses", function ( data ) {
 		var parsed = jQuery.parseJSON( data );
-		console.log("parsed JSON data from getStudentLandingPage: " + parsed);
+		console.log("parsed JSON data from populateStudentLandingPage: " + parsed);
 		parsed.forEach(function(lecture) {
 			$(".addQuestion").before(
-				"<tr><td>" +
+				"<tr class='question-row'><td>" +
 				lecture["id"] +
 				"</td><td>" +
 				lecture["topic"] +
@@ -19,5 +19,5 @@ function populateStudentLandingPage() {
 		});
 	});
 	// getQuestion();
-	console.log("getQuestion called")
+	// console.log("getQuestion called")
 }

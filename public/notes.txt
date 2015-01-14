@@ -1,0 +1,9 @@
+<-- Similar sites -->
+
+http://www.classmarker.com/
+
+http://www.polleverywhere.com/
+
+<-- CSS -->
+
+http://startbootstrap.com/template-overviews/sb-admin/

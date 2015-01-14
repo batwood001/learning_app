@@ -25,7 +25,7 @@ function getQuestion() {
 		
 		console.log("a lecture was clicked");
 		var numbers = ["one", "two", "three", "four", "five", "six", "seven", "eight"];
-		var letters = ["a", "b", "c", "d", "e", "f", "g", "h"];
+		var letters = ["A", "B", "C", "D", "E", "F", "G", "H"];
 		$.get("/lectures/" + $(this).find('a').attr('data-id') + '/questions', function (data) {
 			console.log("the get request worked");
 			var parsed = jQuery.parseJSON( data );

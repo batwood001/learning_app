@@ -11,9 +11,19 @@ function submitAnswer() {
 			}	
 		).success(function(){
 			console.log("answer successfully submitted")
+			$(".student-overview").show();
+		    $(".addQuestion").hide();
+		    $(".toggleStudentView").hide();
+		    $(".toggleTeacherView").show();
+		    $(".activeQuestions").hide();
+		    $(".teacher-overview").hide();
+		    $(".addQuestionButton").hide();
+		    $(".question-row").remove();
+		    populateStudentLandingPage();
 			 // ...for now
 		})
 	})
+
 }
 
 submitAnswer();
