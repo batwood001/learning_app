@@ -47,3 +47,18 @@
 .navbar-inverse .navbar-brand {
   color: #ffffff;
 }
+
+.right-button-bar {
+  position: fixed;
+  bottom: 40%;
+  z-index: 10;
+  right: 0;
+  box-shadow: 10;
+}
+
+.right-button-bar button {
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  border-right: 0;
+}
+
